@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FPL Optimiser design ideas</title>
+<style>
+  :root { --page:#15161a; --band:#23252b; --ink:#ececf0; --muted:#a3a6b3; --line:#34363f; color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--page); color:var(--ink); font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 24px 16px 60px; }
+  h1 { margin: 0 0 4px; } h2 { margin: 40px 0 4px; font-size: 1.2rem; } .muted { color: var(--muted); margin: 2px 0 14px; }
+  .tag { display:inline-block; background:#3a3d48; border-radius:99px; padding:1px 10px; font-size:.78rem; margin-right:8px; }
+  button { background: var(--ink); color:#101114; border:0; border-radius:8px; padding:8px 14px; font:inherit; font-weight:700; cursor:pointer; }
+  button.ghost { background:transparent; color:var(--ink); border:1px solid var(--line); }
+  button.on { outline: 2px solid #fff; }
+  section { background: var(--band); border:1px solid var(--line); border-radius:12px; padding:16px; }
+
+  /* A. pitch */
+  .pitch { position:relative; border-radius:12px; padding:18px 8px 14px; background:
+      repeating-linear-gradient(0deg, #1f7a43 0 46px, #1b6d3c 46px 92px); border:2px solid #2d9a57; overflow:hidden; }
+  .pitch::before { content:""; position:absolute; left:10%; right:10%; top:50%; height:0; border-top:2px solid rgba(255,255,255,.25); }
+  .pitch::after { content:""; position:absolute; left:50%; top:50%; width:90px; height:90px; margin:-45px 0 0 -45px; border:2px solid rgba(255,255,255,.25); border-radius:50%; }
+  .line { display:flex; justify-content:center; gap:10px; margin: 6px 0 14px; position:relative; z-index:1; }
+  .shirt { width: 92px; text-align:center; cursor:pointer; transition: transform .18s ease; position:relative; }
+  .shirt:hover { transform: translateY(-5px) scale(1.04); }
+  .shirt .kit { height:58px; border-radius:14px 14px 8px 8px; position:relative; box-shadow:0 4px 10px rgba(0,0,0,.45); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.25rem; }
+  .shirt .kit::before, .shirt .kit::after { content:""; position:absolute; top:6px; width:18px; height:22px; background:inherit; border-radius:6px; filter:brightness(.85); }
+  .shirt .kit::before { left:-10px; transform:rotate(18deg); } .shirt .kit::after { right:-10px; transform:rotate(-18deg); }
+  .shirt .nm { margin-top:5px; background:rgba(0,0,0,.65); border-radius:6px; padding:1px 4px; font-size:.82rem; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .shirt .fx { font-size:.7rem; color:#e6ffe9; opacity:.9; }
+  .cap { position:absolute; top:-6px; right:4px; width:22px; height:22px; border-radius:50%; background:#ffcf5c; color:#101114; font-size:.75rem; font-weight:800; display:flex; align-items:center; justify-content:center; z-index:2; }
+  .bench { display:flex; justify-content:center; gap:10px; background: rgba(0,0,0,.28); border-radius:10px; padding:10px 6px 6px; margin: 6px 6px 0; position:relative; z-index:1; }
+  .bench .shirt { width: 80px; opacity:.9; }
+  #detail { margin-top:10px; min-height:44px; font-size:.92rem; color:var(--muted); }
+
+  /* B. ticker */
+  .tick { width:100%; border-collapse: separate; border-spacing: 0 6px; }
+  .tick td { padding: 0; }
+  .tick .club { padding: 8px 12px; font-weight:700; border-left:12px solid var(--glow); background:#2b2e36; border-radius:6px 0 0 6px; white-space:nowrap; }
+  .cell { margin-left: 6px; padding: 8px 6px; text-align:center; font-size:.82rem; font-weight:700; color:#0d0e10; border-radius:6px; min-width:84px; transition: transform .15s ease, filter .15s ease; cursor:default; }
+  .cell:hover { transform: scale(1.08); filter: brightness(1.15); }
+  .cell small { display:block; font-weight:500; opacity:.8; }
+  .legend { display:flex; gap:6px; align-items:center; font-size:.8rem; color:var(--muted); margin-bottom:10px; }
+  .legend i { display:inline-block; width:34px; height:10px; border-radius:3px; }
+
+  /* C. bars */
+  .barrow { display:grid; grid-template-columns: 8em 1fr 3.4em; gap:10px; align-items:center; padding:4px 0; }
+  .barrow .t { height: 18px; background:#1b1d22; border-radius:99px; overflow:hidden; }
+  .barrow .f { height:100%; width:0; border-radius:99px; transition: width 900ms cubic-bezier(.2,.8,.2,1); }
+  .barrow .v { text-align:right; font-variant-numeric: tabular-nums; font-weight:700; }
+  .barrow .n { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .dotc { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; }
+
+  /* D. countdown */
+  .count { text-align:center; padding: 18px; border-radius:12px; transition: background .4s ease, border-color .4s ease; border:2px solid var(--c); background: color-mix(in srgb, var(--c) 14%, #1b1d22); }
+  .count .lbl { color: var(--muted); font-size:.9rem; }
+  .count .digits { display:flex; justify-content:center; gap:14px; margin:8px 0; }
+  .count .u { min-width:76px; }
+  .count .num { font-size:2.4rem; font-weight:800; color: var(--c); font-variant-numeric: tabular-nums; line-height:1.1; }
+  .count .what { font-size:.78rem; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; }
+  .count.hot .num { animation: pulse 1s ease-in-out infinite; }
+  @keyframes pulse { 50% { opacity:.55; } }
+  .row { display:flex; gap:8px; flex-wrap:wrap; margin: 10px 0 0; }
+  @media (max-width:560px){ .shirt{width:62px}.shirt .kit{height:46px}.shirt .nm{font-size:.7rem}.bench .shirt{width:56px} .cell{min-width:60px} .barrow{grid-template-columns:6em 1fr 3em} }
+  @media (prefers-reduced-motion: reduce) { * { animation:none !important; transition:none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Design ideas</h1>
+  <p class="muted">Four ideas, using Harvey's real team and today's data. Hover and click things.</p>
+
+  <h2><span class="tag">A</span>Your XI on a pitch</h2>
+  <p class="muted">Shirts in each club's colours with the predicted points on them. Click a player.</p>
+  <section><div id="pitch" class="pitch"></div><div id="detail">Click a player for the detail.</div></section>
+
+  <h2><span class="tag">B</span>Fixture ticker</h2>
+  <p class="muted">The next four matches for each of Harvey's clubs. Green is an easy match for that club's attack and defence, red is a hard one. These are estimates from results so far.</p>
+  <section>
+    <div class="legend">Hard <i style="background:#e8605a"></i><i style="background:#f0a95a"></i><i style="background:#e9dc6b"></i><i style="background:#8fd17e"></i><i style="background:#3ec27a"></i> Easy</div>
+    <table class="tick" id="tick"></table>
+  </section>
+
+  <h2><span class="tag">C</span>Points as bars</h2>
+  <p class="muted">Each player's predicted points for Gameweek 9 as a bar. Colour runs from cool to hot.</p>
+  <section><div id="bars"></div><div class="row"><button class="ghost" id="replay">Replay</button></div></section>
+
+  <h2><span class="tag">D</span>Deadline countdown</h2>
+  <p class="muted">Ticks live. It goes green, then amber, then red as the deadline gets close. Press a button to preview each stage.</p>
+  <section>
+    <div id="count" class="count" style="--c:#3ec27a"><div class="lbl" id="clbl"></div><div class="digits"><div class="u"><div class="num" id="d">0</div><div class="what">days</div></div><div class="u"><div class="num" id="hh">0</div><div class="what">hours</div></div><div class="u"><div class="num" id="m">0</div><div class="what">mins</div></div><div class="u"><div class="num" id="s">0</div><div class="what">secs</div></div></div><div class="lbl" id="cwhat"></div></div>
+    <div class="row"><button class="ghost on" data-sim="">Real deadline</button><button class="ghost" data-sim="260000">3 days to go</button><button class="ghost" data-sim="40000">11 hours to go</button><button class="ghost" data-sim="1800">30 minutes to go</button></div>
+  </section>
+</div>
+
+<script type="module">
+import { CLUBS } from '../../web/clubs.js';
+import { bestLineup } from '../../src/lineup.js';
+import { teamStrengths, fixtureExpectations } from '../../src/ratings.js';
+
+const get = (p) => fetch(`../../data/${p}.json`).then((r) => r.json());
+const [bootstrap, fixtures, advice] = await Promise.all([get('bootstrap'), get('fixtures'), get('advice/latest')]);
+const players = new Map(bootstrap.elements.map((p) => [p.id, p]));
+const teams = new Map(bootstrap.teams.map((t) => [t.id, t]));
+const clubOf = (id) => CLUBS.find((c) => c.fplName === teams.get(players.get(id).team).name);
+const pts = (id, k = 0) => advice.projections[id][k];
+const posOf = (id) => players.get(id).element_type;
+const lineup = advice.lineup ?? bestLineup(advice.squad, posOf, (id) => pts(id));
+const nextFx = (teamId, n) => fixtures.filter((f) => f.event >= advice.gw && (f.team_h === teamId || f.team_a === teamId)).sort((a, b) => a.event - b.event).slice(0, n);
+
+// ---------- A. pitch
+const pitch = document.getElementById('pitch'), detail = document.getElementById('detail');
+const shirt = (id, bench) => {
+  const c = clubOf(id), fx = nextFx(players.get(id).team, 1)[0];
+  const opp = fx ? (fx.team_h === players.get(id).team ? `${teams.get(fx.team_a).short_name} (H)` : `${teams.get(fx.team_h).short_name} (A)`) : '-';
+  const el = document.createElement('div'); el.className = 'shirt';
+  el.innerHTML = `${id === lineup.captain ? '<div class="cap">C</div>' : id === lineup.viceCaptain ? '<div class="cap" style="background:#d9d9e3">V</div>' : ''}<div class="kit" style="background:${c.colour};color:${c.text}">${pts(id).toFixed(1)}</div><div class="nm">${players.get(id).web_name}</div><div class="fx">${opp}</div>`;
+  el.addEventListener('click', () => { detail.textContent = `${players.get(id).web_name} (${c.name}): predicted ${pts(id).toFixed(1)} in GW${advice.gw}, ${advice.projections[id].reduce((a, b) => a + b, 0).toFixed(0)} over the next four. Next: ${nextFx(players.get(id).team, 3).map((f) => f.team_h === players.get(id).team ? teams.get(f.team_a).short_name + ' (H)' : teams.get(f.team_h).short_name + ' (A)').join(', ')}.`; });
+  return el;
+};
+for (const p of [1, 2, 3, 4]) {
+  const row = document.createElement('div'); row.className = 'line';
+  lineup.xi.filter((id) => posOf(id) === p).forEach((id) => row.append(shirt(id)));
+  pitch.append(row);
+}
+const bench = document.createElement('div'); bench.className = 'bench'; lineup.bench.forEach((id) => bench.append(shirt(id, true))); pitch.append(bench);
+
+// ---------- B. ticker
+const strengths = teamStrengths(fixtures, bootstrap.teams);
+const mineTeams = [...new Set(advice.squad.map((id) => players.get(id).team))];
+const ease = (teamId, f) => {
+  const e = fixtureExpectations(f, strengths, new Map());
+  const home = f.team_h === teamId;
+  return home ? e.homeGoals - e.awayGoals : e.awayGoals - e.homeGoals; // goal difference expected for that club
+};
+const scale = ['#e8605a', '#f0a95a', '#e9dc6b', '#8fd17e', '#3ec27a'];
+const colourFor = (d) => scale[Math.max(0, Math.min(4, Math.round((d + 1.2) / 2.4 * 4)))];
+const tick = document.getElementById('tick');
+for (const tid of mineTeams.sort((a, b) => teams.get(a).name.localeCompare(teams.get(b).name))) {
+  const club = CLUBS.find((c) => c.fplName === teams.get(tid).name);
+  const tr = document.createElement('tr');
+  const own = advice.squad.filter((id) => players.get(id).team === tid).map((id) => players.get(id).web_name).join(', ');
+  tr.innerHTML = `<td class="club" style="--glow:${club.glow}">${club.name}<br><small style="color:#a3a6b3;font-weight:500">${own}</small></td>` + nextFx(tid, 4).map((f) => {
+    const home = f.team_h === tid, d = ease(tid, f);
+    return `<td><div class="cell" style="background:${colourFor(d)}" title="GW${f.event}: expected goal difference ${d >= 0 ? '+' : ''}${d.toFixed(1)}">${teams.get(home ? f.team_a : f.team_h).short_name} ${home ? '(H)' : '(A)'}<small>GW${f.event}</small></div></td>`;
+  }).join('');
+  tick.append(tr);
+}
+
+// ---------- C. bars
+const bars = document.getElementById('bars');
+const heat = (v) => `hsl(${Math.round(210 - Math.min(1, v / 8) * 190)} 80% 55%)`; // blue to red
+const order = [...lineup.xi, ...lineup.bench];
+function drawBars() {
+  bars.replaceChildren();
+  for (const id of order) {
+    const c = clubOf(id), v = pts(id);
+    const r = document.createElement('div'); r.className = 'barrow';
+    r.innerHTML = `<div class="n"><span class="dotc" style="background:${c.glow}"></span>${players.get(id).web_name}</div><div class="t"><div class="f" style="background:${heat(v)}"></div></div><div class="v">${v.toFixed(1)}</div>`;
+    bars.append(r);
+    requestAnimationFrame(() => requestAnimationFrame(() => { r.querySelector('.f').style.width = `${Math.min(100, v / 8 * 100)}%`; }));
+  }
+}
+drawBars(); document.getElementById('replay').addEventListener('click', drawBars);
+
+// ---------- D. countdown
+const deadline = Date.parse(bootstrap.events.find((e) => e.id === advice.gw).deadline_time);
+let sim = null;
+const box = document.getElementById('count');
+function tickClock() {
+  const left = sim != null ? sim * 1000 : deadline - Date.now();
+  const s = Math.max(0, Math.floor(left / 1000));
+  const d = Math.floor(s / 86400), hh = Math.floor(s % 86400 / 3600), m = Math.floor(s % 3600 / 60), sec = s % 60;
+  for (const [id, v] of [['d', d], ['hh', hh], ['m', m], ['s', sec]]) document.getElementById(id).textContent = String(v).padStart(2, '0');
+  const colour = s > 2 * 86400 ? '#3ec27a' : s > 12 * 3600 ? '#ffcf5c' : '#ff6b6b';
+  box.style.setProperty('--c', colour); box.classList.toggle('hot', s <= 12 * 3600);
+  document.getElementById('clbl').textContent = `Gameweek ${advice.gw} deadline`;
+  document.getElementById('cwhat').textContent = s > 2 * 86400 ? 'Plenty of time. Check injury news nearer the day.' : s > 12 * 3600 ? 'Time to decide your transfers.' : 'Last chance: lock in your team now.';
+}
+setInterval(tickClock, 1000); tickClock();
+document.querySelectorAll('[data-sim]').forEach((b) => b.addEventListener('click', () => {
+  document.querySelectorAll('[data-sim]').forEach((x) => x.classList.remove('on')); b.classList.add('on');
+  sim = b.dataset.sim ? Number(b.dataset.sim) : null; tickClock();
+}));
+</script>
+</body>
+</html>
