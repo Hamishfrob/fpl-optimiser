@@ -45,10 +45,6 @@ main, .foot, .warn { max-width: 960px; }
 /* pitch */
 .pitch { position: relative; border-radius: 12px; padding: 22px 8px 10px; border: 2px solid #3f9f58; overflow: hidden;
   background: repeating-linear-gradient(0deg, #2f8a3d 0 44px, #2a7c37 44px 88px); }
-.pitch::before { content: ""; position: absolute; left: 4%; right: 4%; top: 50%; border-top: 2px solid rgba(255, 255, 255, .35); }
-.pitch::after { content: ""; position: absolute; left: 50%; top: 50%; width: 96px; height: 96px; margin: -48px 0 0 -48px; border: 2px solid rgba(255, 255, 255, .35); border-radius: 50%; }
-.pitch .box { position: absolute; left: 24%; right: 24%; height: 15%; border: 2px solid rgba(255, 255, 255, .35); z-index: 0; }
-.pitch .box.top { top: 0; border-top: 0; } .pitch .box.bottom { bottom: 0; border-bottom: 0; }
 .line { display: flex; justify-content: center; gap: 12px; margin: 4px 0 18px; position: relative; z-index: 1; flex-wrap: nowrap; }
 .shirt { width: 88px; text-align: center; cursor: pointer; transition: transform .18s ease; position: relative; outline-offset: 4px; }
 .shirt:hover, .shirt:focus-visible { transform: translateY(-5px) scale(1.05); }
@@ -100,3 +96,5 @@ main, .foot, .warn { max-width: 960px; }
 @media (prefers-reduced-motion: reduce) { .lights i, .chip.play, .board[data-stage="now"] canvas { animation: none !important; } }
 .tickwrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 @media (max-width: 560px) { .tclub { padding: 6px 8px; font-size: .8rem; border-left-width: 8px; } .tclub small { display: none; } }
+
+.pitch svg.markings { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }

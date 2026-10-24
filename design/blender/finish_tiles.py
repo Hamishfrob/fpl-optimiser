@@ -14,6 +14,14 @@ for name in ("grass", "steel", "seats"):
     a = np.asarray(im).astype(float)
     print(f"{name} {im.size}: seam col {np.abs(a[:, 0] - a[:, -1]).mean():.1f} vs neighbour {np.abs(a[:, 0] - a[:, 1]).mean():.1f}; "
           f"seam row {np.abs(a[0] - a[-1]).mean():.1f} vs neighbour {np.abs(a[0] - a[1]).mean():.1f}")
+    if name == "grass" and im.width > 512:  # rendered at 1024 for detail, shipped at 512 (shown at about 220 px, so 2x for sharp screens)
+        im = im.resize((512, 512), Image.LANCZOS)
+        a = np.asarray(im).astype(float)
+        # colour grade: lift the light stripes and sink the dark ones so the mowing reads at the small size the page shows
+        yy = (np.arange(512)[:, None] + 0.5) / 512
+        grade = 1.0 + 0.17 * np.tanh(40 * np.sin(2 * np.pi * (yy + 0.25)))
+        a = np.clip(a * grade[..., None] * 1.2, 0, 255)
+        im = Image.fromarray(a.astype(np.uint8))
     if name == "seats":  # gaps between seats catch reflected light and come out grey: darken everything that is not red
         r, g, b = a[..., 0], a[..., 1], a[..., 2]
         m = np.clip((r - 0.5 * (g + b) - 8) / 45, 0, 1)

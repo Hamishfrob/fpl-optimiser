@@ -52,3 +52,10 @@ One idea, built as a picture made from Harvey's own data: the top of the page is
 - Section colours: team card deep green, transfers red seats, fixtures night blue, suggested squad dark gold, team entry steel blue, headings as red ribbons.
 - Chips rebuilt: one colour each (Wildcard gold, Free Hit cyan, Bench Boost red, Triple Captain orange), icon, big gain number, "play now" glow in the chip's own colour, used chips greyed.
 - Not done: the seat texture is subdued under a dark overlay so text stays readable. Colours still judged by eye.
+
+## Round 3, 2026-10-24: real turf and painted pitch lines
+
+- Grass rebuilt as geometry: about 190,000 individual blades modelled in Blender (design/blender/render_grass.py), leaning one way in the light stripes and the other in the dark ones, as a mower leaves them, rendered at 1024 px (64 samples, about 5 minutes) and shrunk to 512 px. The blade layout wraps exactly, so the tile repeats. A colour grade in finish_tiles.py lifts the light stripes and sinks the dark ones so the mowing reads at the small size shown. Shipped grass.webp is about 94 KB (all three tiles 117 KB).
+- Stripe edges sit in the middle of the tile (not on its border), which removed a bright seam line that showed at the tile join.
+- Pitch markings are now drawn as an SVG layer from src/pitchlines.js at the real proportions (68 x 105 m): outline, halfway line, centre circle and spot, both penalty areas, six-yard boxes, penalty spots and arcs, corner arcs. Circles stay round on any shape of pitch. Lines have a slight painted roughness (SVG displacement filter).
+- Checked at 1100 px and 390 px wide. Tests 102 of 102.
