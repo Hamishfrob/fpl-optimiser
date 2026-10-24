@@ -37,3 +37,32 @@ test('pairMoves still returns every sale and purchase when positions do not line
   const pairs = pairMoves([1], [2], (id) => (id === 1 ? 'DEF' : 'MID'));
   assert.deepEqual(pairs.map((p) => [p.out, p.in]), [[1, 2]]);
 });
+
+import { countdownParts, countdownStage, heatColour, easeColour, pitchRows } from '../src/view.js';
+
+test('countdownParts splits milliseconds into days, hours, minutes and seconds, never negative', () => {
+  assert.deepEqual(countdownParts((2 * 86400 + 3 * 3600 + 4 * 60 + 5) * 1000), { days: 2, hours: 3, mins: 4, secs: 5 });
+  assert.deepEqual(countdownParts(-5000), { days: 0, hours: 0, mins: 0, secs: 0 });
+});
+test('the countdown is calm over two days out, soon until twelve hours, then now', () => {
+  assert.equal(countdownStage(3 * 86400), 'calm');
+  assert.equal(countdownStage(2 * 86400), 'soon');
+  assert.equal(countdownStage(13 * 3600), 'soon');
+  assert.equal(countdownStage(12 * 3600), 'now');
+  assert.equal(countdownStage(0), 'now');
+});
+test('heatColour runs from blue for low points to red for high points and clamps', () => {
+  assert.match(heatColour(0), /^hsl\(210 /);
+  assert.match(heatColour(8), /^hsl\(20 /);
+  assert.equal(heatColour(40), heatColour(8));
+  assert.equal(heatColour(-3), heatColour(0));
+});
+test('easeColour gives one of five colours, hardest to easiest, and clamps', () => {
+  const lo = easeColour(-5), hi = easeColour(5), mid = easeColour(0);
+  assert.notEqual(lo, hi); assert.notEqual(lo, mid); assert.notEqual(mid, hi);
+  assert.equal(easeColour(-1.2), lo); assert.equal(easeColour(1.2), hi);
+});
+test('pitchRows splits the starting XI into goalkeeper, defenders, midfielders, forwards', () => {
+  const pos = new Map([[1, 1], [2, 2], [3, 2], [4, 3], [5, 4]]);
+  assert.deepEqual(pitchRows([1, 2, 3, 4, 5], (id) => pos.get(id)), [[1], [2, 3], [4], [5]]);
+});

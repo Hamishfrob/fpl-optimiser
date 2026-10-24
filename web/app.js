@@ -1,7 +1,9 @@
 // The page: reads the daily JSON files and shows your team, the chips, and club-by-club bands.
 // It runs the solver (in a worker) only for Recalculate and for a team typed in by hand.
 import { CLUBS } from './clubs.js';
-import { isStale, money, nextFixtures, pairMoves } from '../src/view.js';
+import { isStale, money, nextFixtures, pairMoves, countdownParts, countdownStage } from '../src/view.js';
+import { pitchView, barsView, tickerView } from './views.js';
+import { drawStand, drawBoard } from './stand.js';
 import { bestLineup, validateSquad } from '../src/lineup.js';
 
 const POS = { 1: 'GKP', 2: 'DEF', 3: 'MID', 4: 'FWD' };
@@ -40,6 +42,34 @@ async function load() {
   return { status, bootstrap, fixtures, odds, entry, advice, squad };
 }
 
+let viewMode = 'pitch';
+let stopStand = null, clock = null, resizeTimer = null;
+const STAGE_TEXT = {
+  calm: ['#3ec27a', 'Plenty of time. Check the injury news nearer the day.'],
+  soon: ['#ffcf5c', 'Time to settle your transfers.'],
+  now: ['#ff6b6b', 'Last chance: lock in your team.'],
+};
+
+/** The stadium header: the team name in white seats, the gameweek ribbon, and the live scoreboard countdown. */
+function drawHeader(teamName, advice, deadlineIso) {
+  stopStand?.();
+  stopStand = drawStand($('stand'), teamName);
+  $('ribbon-right').textContent = `Gameweek ${advice.gw}`;
+  const deadline = Date.parse(deadlineIso);
+  clearInterval(clock);
+  const tick = () => {
+    const left = deadline - Date.now();
+    const p = countdownParts(left), stage = countdownStage(left / 1000);
+    const two = (n) => String(n).padStart(2, '0');
+    drawBoard($('board'), `${two(p.days)}:${two(p.hours)}:${two(p.mins)}:${two(p.secs)}`, STAGE_TEXT[stage][0]);
+    $('boardwrap').dataset.stage = stage;
+    $('cwhat').textContent = left > 0 ? STAGE_TEXT[stage][1] : 'The deadline has passed. The page switches to your real team after the next update.';
+  };
+  tick();
+  clock = setInterval(tick, 1000);
+  addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => drawHeader(teamName, advice, deadlineIso), 250); }, { once: true });
+}
+
 function render(d, advice) {
   const { bootstrap, fixtures } = d;
   const players = new Map(bootstrap.elements.map((p) => [p.id, p]));
@@ -57,6 +87,7 @@ function render(d, advice) {
   main.replaceChildren();
 
   $('sub').textContent = `${d.entry.entry.name} · gameweek ${advice.gw} deadline ${new Date(next.deadline_time).toLocaleString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })} · data updated ${new Date(d.status.updatedAt).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}`;
+  drawHeader(d.entry.entry.name, advice, next.deadline_time);
   const warn = $('warn');
   warn.hidden = !isStale(d.status.updatedAt);
   warn.textContent = 'This data is more than 36 hours old, so injuries and prices may have moved. Check the FPL site before you decide.';
@@ -81,14 +112,34 @@ function render(d, advice) {
     const better = picked && best.total - pickedTotal >= 0.5
       ? ` The best lineup from the same 15 is predicted ${best.total.toFixed(0)}: captain ${nameOf(best.captain)}, and ${best.xi.filter((id) => !picked.xi.includes(id)).map(nameOf).join(', ') || 'the same eleven'} starting.` : '';
     const source = advice.squadSource === 'manual' ? 'Entered by hand. The FPL site shows your real team after the first deadline, and this page then switches to it by itself.' : 'Read from the FPL site.';
+    const ctx = { advice, players, teams: new Map(bootstrap.teams.map((t) => [t.id, t])), fixtures, clubs: CLUBS, clubFor, proj, total4, posOf, nameOf, onPick: (text) => { detail.textContent = text; } };
+    const detail = h('p', { className: 'muted detail' }, 'Tap a player for the detail.');
+    const holder = h('div', { className: 'viewholder' });
+    const bars = barsView(ctx, lineup);
+    const views = {
+      pitch: () => h('div', {}, pitchView(ctx, lineup), detail),
+      bars: () => h('div', {}, bars.el, h('button', { className: 'go ghost', type: 'button', onclick: bars.replay }, 'Replay')),
+      list: () => h('div', {}, h('ul', { className: 'rows' }, head, lineup.xi.map((id) => row(id, { mine: true, tag: id === lineup.captain ? 'cap' : id === lineup.viceCaptain ? 'vc' : '' }))),
+        h('p', { className: 'label' }, 'Bench'), h('ul', { className: 'rows' }, lineup.bench.map((id) => row(id, { mine: true })))),
+    };
+    const tabs = h('div', { className: 'tabs', role: 'tablist' });
+    const show = (m) => {
+      viewMode = m;
+      holder.replaceChildren(views[m]());
+      [...tabs.children].forEach((b) => { b.setAttribute('aria-selected', String(b.dataset.m === m)); b.classList.toggle('on', b.dataset.m === m); });
+      if (m === 'bars') bars.replay();
+    };
+    for (const [m, label] of [['pitch', 'Pitch'], ['bars', 'Points bars'], ['list', 'List']]) {
+      tabs.append(h('button', { className: 'tab', type: 'button', role: 'tab', onclick: () => show(m) }, label));
+      tabs.lastChild.dataset.m = m;
+    }
     main.append(h('section', { className: 'card team' },
       h('h2', { className: 'first' }, 'Your team'),
       h('div', { className: 'big' }, `${lineup.total.toFixed(0)} predicted points in gameweek ${advice.gw}`),
       h('p', { className: 'muted' }, `${picked ? 'Your lineup as picked' : 'Best lineup'}: captain ${nameOf(lineup.captain)}${lineup.viceCaptain ? `, vice-captain ${nameOf(lineup.viceCaptain)}` : ''}. About ${lineup4.total.toFixed(0)} points for the squad over the next four gameweeks.${better} ${source}`),
-      h('ul', { className: 'rows' }, head, lineup.xi.map((id) => row(id, { mine: true, tag: id === lineup.captain ? 'cap' : id === lineup.viceCaptain ? 'vc' : '' }))),
-      h('p', { className: 'label' }, 'Bench'),
-      h('ul', { className: 'rows' }, lineup.bench.map((id) => row(id, { mine: true }))),
+      tabs, holder,
       h('button', { className: 'go ghost', type: 'button', onclick: () => $('team-entry')?.scrollIntoView() }, 'Edit my team')));
+    show(viewMode);
   } else {
     main.append(h('section', { className: 'card team' }, h('h2', { className: 'first' }, 'Your team'),
       h('p', {}, 'The FPL site hides your team until your first deadline passes, so this page can\'t see it yet. Type it in below (it takes a minute) and everything on this page will be about your players.')));
@@ -108,10 +159,15 @@ function render(d, advice) {
         g.hitPoints ? h('span', { className: 'tag sell' }, `${g.hitPoints}`) : null)))));
   }
 
+  if (advice.mode === 'transfers') {
+    const tctx = { advice, players, teams: new Map(bootstrap.teams.map((t) => [t.id, t])), fixtures, clubs: CLUBS, nameOf };
+    main.append(h('section', { className: 'card' }, h('h2', { className: 'first' }, 'Next four matches for your clubs'), tickerView(tctx, mine)));
+  }
+
   // ---- 3. CHIPS
   const chipCards = Object.entries(CHIP_INFO).map(([key, [label, blurb]]) => {
     const c = advice.chips?.find((x) => x.chip === key);
-    const card = h('div', { className: 'chip' }, h('h4', {}, label), h('p', { className: 'muted' }, blurb));
+    const card = h('div', { className: `chip${c?.playNow ? ' play' : ''}` }, h('h4', {}, label), h('p', { className: 'muted' }, blurb));
     if (advice.mode !== 'transfers') { card.append(h('p', {}, 'Type in your team to see what this would do for it.')); return card; }
     if (!c) { card.append(h('span', { className: 'tag hold' }, 'USED'), h('p', { className: 'muted' }, 'Already played in this half of the season.')); return card; }
     if (!c.bestGw) { card.append(h('span', { className: 'tag hold' }, 'HOLD'), h('p', {}, 'No good week in the next four.')); return card; }

@@ -6,13 +6,24 @@
 <title>FPL Optimiser</title>
 <meta name="color-scheme" content="dark">
 <link rel="stylesheet" href="web/style.css">
+<link rel="stylesheet" href="web/stadium.css">
 </head>
 <body>
-<header class="top">
-  <h1>FPL Optimiser</h1>
+<header class="stadium">
+  <div class="lights" aria-hidden="true"><i></i><i></i></div>
+  <canvas id="stand" aria-hidden="true"></canvas>
+  <div class="ribbon"><h1>FPL Optimiser</h1><span id="ribbon-right"></span></div>
+  <div class="board" id="boardwrap" data-stage="calm">
+    <div class="lbl">Deadline countdown</div>
+    <div class="boardinner"><canvas id="board" aria-hidden="true"></canvas>
+    <div class="units" aria-hidden="true"><span>days</span><i></i><span>hours</span><i></i><span>mins</span><i></i><span>secs</span></div></div>
+    <p id="cwhat"></p>
+  </div>
+</header>
+<div class="top">
   <p id="sub" class="sub">Loading…</p>
   <button id="how-btn" class="go ghost" type="button">How the predictions work</button>
-</header>
+</div>
 <div id="warn" class="warn" hidden></div>
 <main id="main">
   <p class="loading">Loading this week's advice…</p>
