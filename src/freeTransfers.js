@@ -21,13 +21,14 @@ export function sellingPrice(boughtAt, now) {
 }
 
 /** @returns {Map<number, number>} player id to selling price */
-export function sellingPrices(squadIds, transfers, players) {
+/** startedEvent: the gameweek the manager joined. Original picks of a late joiner were bought at that week's price, which the public feed does not give, so the current price is assumed. */
+export function sellingPrices(squadIds, transfers, players, startedEvent = 1) {
   const byId = new Map(players.map((p) => [p.id, p]));
   const out = new Map();
   for (const id of squadIds) {
     const p = byId.get(id);
     const buys = transfers.filter((t) => t.element_in === id).sort((a, b) => b.event - a.event || String(b.time).localeCompare(String(a.time)));
-    const boughtAt = buys.length ? buys[0].element_in_cost : p.now_cost - p.cost_change_start;
+    const boughtAt = buys.length ? buys[0].element_in_cost : (startedEvent > 1 ? p.now_cost : p.now_cost - p.cost_change_start);
     out.set(id, sellingPrice(boughtAt, p.now_cost));
   }
   return out;

@@ -53,3 +53,18 @@ test('projectAll covers every player for every gameweek and is finite', () => {
   const top = [...r.points.entries()].sort((a, b) => b[1][0] - a[1][0])[0];
   assert.ok(top[1][0] > 2 && top[1][0] < 14, `top player GW9 projection ${top[1][0]}`);
 });
+
+test('a doubtful player is doubtful for the next round only, later weeks assume he is fit', () => {
+  const out = { ...base, chance_of_playing_next_round: 0 };
+  const f = [fix(1.35, 1.35, 0.26)];
+  assert.equal(expectedPoints(out, f, rules, { ...ctx, gwOffset: 0 }).points, 0);
+  assert.ok(expectedPoints(out, f, rules, { ...ctx, gwOffset: 1 }).points > 2);
+});
+test('projectAll applies chance of playing to the first gameweek only', () => {
+  const doubtful = boot.elements.find((e) => e.chance_of_playing_next_round === 0 || e.chance_of_playing_next_round === 25) ?? boot.elements[0];
+  const el = boot.elements.map((e) => (e.id === doubtful.id ? { ...e, chance_of_playing_next_round: 0 } : e));
+  const r = projectAll({ ...boot, elements: el }, fx, parseFixturesCsv(csv), 9, 3);
+  const pts = r.points.get(doubtful.id);
+  assert.equal(pts[0], 0);
+  assert.ok(pts[1] > 0 || pts[2] > 0);
+});

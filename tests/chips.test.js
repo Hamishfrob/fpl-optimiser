@@ -17,7 +17,7 @@ function setup(players, extra = {}) {
   const s = solver.solveSquad({ players, budget: 1000, gwIndex: 0 });
   const sell = new Map(s.squad.map((id) => [id, players.find((p) => p.id === id).cost]));
   return { squad: s.squad, bank: 1000 - s.cost, freeTransfers: 1, sellPrices: sell, players, gwFrom: 0, horizon: 4, hitCost: 4, ftValue: 1.5,
-    chipsAvailable: ['wildcard', 'freehit', 'bboost', '3xc'], currentGw: 10, firstSetDeadlineGw: 19, ...extra };
+    chipsAvailable: ['wildcard', 'freehit', 'bboost', '3xc'], currentGw: 10, windowEndGw: 19, ...extra };
 }
 const find = (advice, chip) => advice.find((a) => a.chip === chip);
 
@@ -52,4 +52,9 @@ test('Wildcard and Free Hit now come with a legal squad', () => {
   }
   const w = find(advice, 'wildcard');
   assert.ok(w.squadIfNow === undefined || w.squadIfNow.squad.length === 15);
+});
+
+test('in the second half chips are advised across Gameweeks 20 to 38', () => {
+  const advice = evaluateChips(solver, setup(pool({ 3: 5 }), { currentGw: 21, windowEndGw: 38 }));
+  assert.equal(find(advice, 'bboost').bestGw, 24);
 });

@@ -20,7 +20,15 @@ export async function runDaily({ outDir, entryId, fetchers = real, now = new Dat
   const oddsRows = parseFixturesCsv(oddsCsv);
   const solver = createSolver(await Highs());
   const date = now.toISOString().slice(0, 10);
-  const advice = computeAdvice({ bootstrap, fplFixtures, oddsRows, entry, solver, date, overrides: { horizon } }); // throws on an unmatched odds team name
+  // In a Free Hit week the feed shows the temporary squad, which reverts at the next deadline: plan from the squad before it.
+  let planEntry = entry;
+  if (entry.picks?.active_chip === 'freehit') {
+    try {
+      const prev = JSON.parse(readFileSync(join(outDir, 'squad', `gw${entry.picks.entry_history.event - 1}.json`), 'utf8'));
+      planEntry = { ...entry, picks: { picks: prev.picks, entry_history: prev.entry_history, active_chip: null } };
+    } catch { /* no earlier squad file saved: fall back to the temporary squad */ }
+  }
+  const advice = computeAdvice({ bootstrap, fplFixtures, oddsRows, entry: planEntry, solver, date, overrides: { horizon } }); // throws on an unmatched odds team name
   const gw = advice.gw;
   const picks = entry.picks;
   const files = new Map();
@@ -35,7 +43,7 @@ export async function runDaily({ outDir, entryId, fetchers = real, now = new Dat
     elements: bootstrap.elements.map((e) => pick(e, PLAYER_FIELDS)) });
   put('fixtures.json', fplFixtures.map((f) => pick(f, ['id', 'event', 'team_h', 'team_a', 'kickoff_time', 'finished', 'team_h_score', 'team_a_score'])));
   put('odds.json', { fetchedAt: now.toISOString(), rows: oddsRows });
-  put('entry.json', { entry: pick(entry.entry, ['id', 'name', 'player_first_name', 'current_event']), history: entry.history, transfers: entry.transfers });
+  put('entry.json', { entry: pick(entry.entry, ['id', 'name', 'player_first_name', 'current_event', 'started_event']), history: entry.history, transfers: entry.transfers });
   put('status.json', { updatedAt: now.toISOString(), gw, squadAvailable: Boolean(picks) });
 
   for (const [path, text] of files) {

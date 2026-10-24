@@ -5,14 +5,14 @@ const MIN_GAIN_NOW = 4; // points; a smaller gain is not worth spending a chip o
 
 /**
  * @param {{solveSquad:Function, planTransfers:Function}} solver from createSolver
- * @param {object} input planner input plus {chipsAvailable: string[], currentGw: number, firstSetDeadlineGw: number}
+ * @param {object} input planner input plus {chipsAvailable: string[], currentGw: number, windowEndGw: number (19 in the first half, 38 in the second)}
  * @returns {{chip:string, bestGw:number|null, gainVsNoChip:number, playNow:boolean, squadIfNow?:object}[]}
  */
 export function evaluateChips(solver, input) {
-  const { chipsAvailable, currentGw, firstSetDeadlineGw, horizon, gwFrom, players } = input;
+  const { chipsAvailable, currentGw, windowEndGw, horizon, gwFrom, players } = input;
   const byId = new Map(players.map((p) => [p.id, p]));
   const pts = (id, t) => byId.get(id).points[gwFrom + t] ?? 0;
-  const weeks = [...Array(horizon).keys()].filter((t) => currentGw + t <= firstSetDeadlineGw);
+  const weeks = [...Array(horizon).keys()].filter((t) => currentGw + t <= windowEndGw);
   const base = solver.planTransfers(input);
   const value = [...input.squad].reduce((a, id) => a + (input.sellPrices.get(id) ?? byId.get(id).cost), 0) + input.bank;
 

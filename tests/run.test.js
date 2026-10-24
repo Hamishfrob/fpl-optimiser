@@ -20,12 +20,12 @@ function legalPicks() {
   assert.equal(picks.length, 15);
   return picks;
 }
-function fetchers({ picks = null, odds = csv } = {}) {
+function fetchers({ picks = null, odds = csv, activeChip = null } = {}) {
   return {
     fetchBootstrap: async () => boot,
     fetchFixtures: async () => fx('fpl-fixtures.json'),
     fetchOddsCsv: async () => odds,
-    fetchEntry: async () => ({ entry: { id: 11160462, name: 'Hlfcfc', current_event: 8 }, history: { current: [{ event: 8, bank: 5, value: 1000, event_transfers: 0, event_transfers_cost: 0 }, ], chips: [] }, transfers: [], picks: picks && { picks, entry_history: { event: 8, bank: 5, value: 995 }, active_chip: null } }),
+    fetchEntry: async () => ({ entry: { id: 11160462, name: 'Hlfcfc', current_event: 8 }, history: { current: [{ event: 8, bank: 5, value: 1000, event_transfers: 0, event_transfers_cost: 0 }, ], chips: [] }, transfers: [], picks: picks && { picks, entry_history: { event: 8, bank: 5, value: 995 }, active_chip: activeChip } }),
   };
 }
 const out = () => mkdtempSync(join(tmpdir(), 'fpl-'));
@@ -67,4 +67,14 @@ test('an odds team name that matches nothing stops the job before anything is wr
   const bad = csv.replace('Arsenal', 'Atlantis FC');
   await assert.rejects(() => runDaily({ outDir: dir, entryId: 11160462, fetchers: fetchers({ odds: bad }), now: NOW }), /Unknown team in odds file: Atlantis FC/);
   assert.deepEqual(readdirSync(dir), []);
+});
+
+test('during a Free Hit week the plan starts from the squad that comes back, not the temporary one', async () => {
+  const dir = out();
+  const real = legalPicks();
+  mkdirSync(join(dir, 'squad'), { recursive: true });
+  writeFileSync(join(dir, 'squad', 'gw7.json'), JSON.stringify({ gw: 7, picks: real, entry_history: { event: 7, bank: 5, value: 995 } }));
+  const temp = legalPicks().map((p, i) => (i === 0 ? { ...p, element: boot.elements[boot.elements.length - 1].id } : p));
+  const advice = await runDaily({ outDir: dir, entryId: 11160462, fetchers: fetchers({ picks: temp, activeChip: 'freehit' }), now: NOW, horizon: 2 });
+  assert.deepEqual([...advice.squad].sort((a, b) => a - b), real.map((p) => p.element).sort((a, b) => a - b));
 });

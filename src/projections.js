@@ -24,7 +24,8 @@ const shrink = (rate, minutes, prior, rules) => {
 /** @param {object} player FPL element @param {{goalsFor:number,goalsAgainst:number,cleanSheet:number,source:string,label:string}[]} fixtures 0, 1 or 2 */
 export function expectedPoints(player, fixtures, rules, ctx) {
   const pos = POS[player.element_type];
-  const chance = player.chance_of_playing_next_round == null ? 1 : player.chance_of_playing_next_round / 100;
+  // The FPL "chance of playing" is for the next round only; later weeks assume he is fit.
+  const chance = (ctx.gwOffset ?? 0) > 0 || player.chance_of_playing_next_round == null ? 1 : player.chance_of_playing_next_round / 100;
   const share = ctx.teamPlayed > 0 ? clamp(player.minutes / (ctx.teamPlayed * 90), 0, 1) : 0.5;
   const e90 = chance * share;
   const prior = ctx.posAvg[player.element_type];
@@ -88,7 +89,7 @@ export function projectAll(bootstrap, fplFixtures, oddsRows, gwFrom, horizon) {
           ? { goalsFor: e.homeGoals, goalsAgainst: e.awayGoals, cleanSheet: e.homeCleanSheet, source: e.source, label: `v ${short.get(g.team_a)} (H)` }
           : { goalsFor: e.awayGoals, goalsAgainst: e.homeGoals, cleanSheet: e.awayCleanSheet, source: e.source, label: `@ ${short.get(g.team_h)} (A)` });
       }
-      const r = expectedPoints(p, mine, rules, { teamPlayed: teamPlayed.get(p.team), posAvg });
+      const r = expectedPoints(p, mine, rules, { teamPlayed: teamPlayed.get(p.team), posAvg, gwOffset: gw - gwFrom });
       points.get(p.id).push(r.points);
       detail.get(p.id).push({ estimate: r.estimate, reasons: r.reasons, fixtures: mine.map((m) => m.label) });
     }

@@ -1,6 +1,6 @@
 // The page: reads the daily JSON files, shows the advice, and can recalculate in a worker.
 import { CLUBS } from './clubs.js';
-import { isStale, money, nextFixtures, groupByClub } from '../src/view.js';
+import { isStale, money, nextFixtures, groupByClub, pairMoves } from '../src/view.js';
 
 const POS = { 1: 'GKP', 2: 'DEF', 3: 'MID', 4: 'FWD' };
 const $ = (id) => document.getElementById(id);
@@ -32,6 +32,8 @@ function render(d, advice) {
   const clubOf = new Map(CLUBS.map((c) => [c.fplName, c]));
   const nameOf = (id) => players.get(id).web_name;
   const info = (id) => advice.info[id];
+  const posOf = (id) => players.get(id).element_type;
+  const moves = (g) => pairMoves(g.out, g.in, posOf).map((m) => `${nameOf(m.out)} → ${nameOf(m.in)}`);
   const next = bootstrap.events.find((e) => e.id === advice.gw);
   const main = $('main');
   main.replaceChildren();
@@ -60,16 +62,18 @@ function render(d, advice) {
     const g0 = advice.plan[0];
     main.append(h('section', { className: 'card' },
       h('h3', {}, 'This week'),
-      h('div', { className: 'big' }, g0.in.length ? g0.out.map((id, i) => `${nameOf(id)} → ${nameOf(g0.in[i])}`).join(',  ') : 'Make no transfers'),
+      h('div', { className: 'big' }, g0.in.length ? moves(g0).join(',  ') : 'Make no transfers'),
       h('p', { className: 'muted' }, `${advice.freeTransfers} free transfer${advice.freeTransfers === 1 ? '' : 's'}, bank ${money(advice.bank)}${g0.hitPoints ? `, hit ${g0.hitPoints} points` : ''}. Captain ${nameOf(g0.captain)}.`),
       h('ul', { className: 'rows' }, advice.plan.map((g) => h('li', {}, h('span', { className: 'pos' }, `GW${g.gw}`),
-        h('span', { className: 'name' }, g.in.length ? g.out.map((id, i) => `${nameOf(id)} → ${nameOf(g.in[i])}`).join(', ') : 'Roll the free transfer'),
+        h('span', { className: 'name' }, g.in.length ? moves(g).join(', ') : 'Roll the free transfer'),
         g.hitPoints ? h('span', { className: 'tag sell' }, `${g.hitPoints}`) : null)))));
     main.append(h('section', { className: 'card' }, h('h3', {}, 'Chips'),
       !advice.chips.length ? h('p', { className: 'muted' }, 'No chips left in this half.') : h('ul', { className: 'rows' }, advice.chips.map((c) => h('li', {},
         h('span', { className: 'name' }, { wildcard: 'Wildcard', freehit: 'Free Hit', bboost: 'Bench Boost', '3xc': 'Triple Captain' }[c.chip]),
-        h('span', { className: 'pts' }, c.bestGw ? `best in GW${c.bestGw}, about +${c.gainVsNoChip.toFixed(0)} points` : 'no good week yet'),
-        h('span', { className: `tag ${c.playNow ? 'buy' : 'hold'}` }, c.playNow ? 'PLAY NOW' : 'HOLD')))),
+        h('span', { className: 'pts' }, c.bestGw ? `best in GW${c.bestGw}, about ${c.gainVsNoChip >= 1 ? '+' : ''}${c.gainVsNoChip.toFixed(0)} points` : 'no good week yet'),
+        h('span', { className: `tag ${c.playNow ? 'buy' : 'hold'}` }, c.playNow ? 'PLAY NOW' : 'HOLD'),
+        c.squadIfNow ? h('details', { className: 'chipsquad' }, h('summary', {}, 'Squad to move to'),
+          h('p', { className: 'muted' }, `Starting XI: ${c.squadIfNow.xi.map(nameOf).join(', ')}. Bench: ${c.squadIfNow.bench.map(nameOf).join(', ')}. Captain ${nameOf(c.squadIfNow.captain)}.`)) : null))),
       h('p', { className: 'muted' }, 'Whether you still have both sets of chips is not confirmed. Check the Chips screen on the FPL site.')));
   }
 
@@ -123,7 +127,7 @@ function recalc(d, { bank, ft, btn, msg, mode }) {
   };
   worker.onerror = (e) => { btn.disabled = false; msg.textContent = `The calculation failed to start: ${e.message}`; };
   worker.postMessage({ bootstrap: { ...d.bootstrap, elements: d.bootstrap.elements }, fplFixtures: d.fixtures, oddsRows: d.odds.rows,
-    entry: { history: d.entry.history, transfers: d.entry.transfers, picks: d.squad && { picks: d.squad.picks, entry_history: d.squad.entry_history } },
+    entry: { startedEvent: d.entry.entry.started_event, history: d.entry.history, transfers: d.entry.transfers, picks: d.squad && { picks: d.squad.picks, entry_history: d.squad.entry_history } },
     date: d.advice.date, overrides });
 }
 

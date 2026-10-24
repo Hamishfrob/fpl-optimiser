@@ -28,3 +28,14 @@ export function groupByClub(ids, players, teams) {
   return [...groups].map(([teamId, list]) => ({ team: teams.find((t) => t.id === teamId), ids: list }))
     .sort((a, b) => b.ids.length - a.ids.length || a.team.name.localeCompare(b.team.name));
 }
+
+/** Pair each sale with a purchase in the same position, so "midfielder to defender" is never shown as one swap. */
+export function pairMoves(outs, ins, positionOf) {
+  const free = [...ins];
+  const pairs = outs.map((o) => {
+    const i = free.findIndex((x) => positionOf(x) === positionOf(o));
+    return { out: o, in: i >= 0 ? free.splice(i, 1)[0] : undefined };
+  });
+  for (const p of pairs) if (p.in === undefined && free.length) p.in = free.shift();
+  return pairs.filter((p) => p.in !== undefined);
+}

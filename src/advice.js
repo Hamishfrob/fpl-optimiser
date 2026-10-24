@@ -4,7 +4,8 @@ import { evaluateChips } from './chips.js';
 import { deriveFreeTransfers, sellingPrices } from './freeTransfers.js';
 
 export const HORIZON = 4;
-export const FIRST_SET_DEADLINE_GW = 19;
+export const FIRST_SET_DEADLINE_GW = 19; // first set of chips must be used before this gameweek's deadline
+const LAST_GW = 38;
 const ALL_CHIPS = ['wildcard', 'freehit', 'bboost', '3xc'];
 
 /**
@@ -30,11 +31,12 @@ export function computeAdvice({ bootstrap, fplFixtures, oddsRows, entry, solver,
     const squadIds = picks.picks.map((p) => p.element);
     const bank = overrides.bank ?? picks.entry_history.bank;
     const freeTransfers = overrides.freeTransfers ?? deriveFreeTransfers(entry.history, entry.transfers, gw);
-    const input = { squad: squadIds, bank, freeTransfers, sellPrices: sellingPrices(squadIds, entry.transfers, bootstrap.elements),
+    const input = { squad: squadIds, bank, freeTransfers, sellPrices: sellingPrices(squadIds, entry.transfers, bootstrap.elements, entry.startedEvent ?? entry.entry?.started_event ?? 1),
       players, gwFrom: 0, horizon, hitCost: 4, ftValue: 1.5 };
     const plan = solver.planTransfers(input);
-    const used = new Set((entry.history.chips ?? []).filter((c) => c.event <= FIRST_SET_DEADLINE_GW).map((c) => c.name));
-    const chips = evaluateChips(solver, { ...input, chipsAvailable: ALL_CHIPS.filter((c) => !used.has(c)), currentGw: gw, firstSetDeadlineGw: FIRST_SET_DEADLINE_GW });
+    const firstHalf = gw <= FIRST_SET_DEADLINE_GW;
+    const used = new Set((entry.history.chips ?? []).filter((c) => (firstHalf ? c.event <= FIRST_SET_DEADLINE_GW : c.event > FIRST_SET_DEADLINE_GW)).map((c) => c.name));
+    const chips = evaluateChips(solver, { ...input, chipsAvailable: ALL_CHIPS.filter((c) => !used.has(c)), currentGw: gw, windowEndGw: firstHalf ? FIRST_SET_DEADLINE_GW : LAST_GW });
     squadIds.forEach((id) => mention.add(id));
     plan.gameweeks.forEach((g) => { g.in.forEach((id) => mention.add(id)); g.xi.forEach((id) => mention.add(id)); });
     advice = { date, gw, mode: 'transfers', squad: squadIds, freeTransfers, bank, chipEntitlementVerified: false, totalGain: plan.totalGain,

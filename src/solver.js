@@ -106,7 +106,8 @@ export function planTransfers(highs, input) {
     if (t > 0) rows[rows.length - 1] = ` bank_${t}: ${sum([[1, `b${t}`], [-1, `b${t - 1}`], ...players.flatMap((p) => [[-sp(p), OUT(p)], [p.cost, IN(p)]])])} = 0`;
     // free transfers and hits
     cont.push(`b${t}`, `h${t}`, `f${t}`);
-    add(`tr_${t}`, sum([[1, `h${t}`], [1, `f${t}`], ...players.map((p) => [-1, IN(p)])]), '>=', 0);
+    // A Wildcard week allows any number of transfers; every other week is limited to free transfers plus paid hits.
+    if (!wild(t)) add(`tr_${t}`, sum([[1, `h${t}`], [1, `f${t}`], ...players.map((p) => [-1, IN(p)])]), '>=', 0);
     // A hit is exactly the transfers beyond the free ones: paying (y=1) forces every free transfer to be used,
     // so the solver cannot buy extra banked free transfers by overpaying.
     bin.push(`y${t}`);

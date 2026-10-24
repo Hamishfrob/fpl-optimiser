@@ -46,3 +46,9 @@ test('sellingPrices uses the latest transfer in, or the start price for original
   assert.equal(m.get(7), 53);
   assert.equal(m.get(8), 39);
 });
+
+test('a manager who joined after gameweek 1 is assumed to have bought original picks at the current price', () => {
+  const players = [{ id: 7, now_cost: 56, cost_change_start: 6 }];
+  assert.equal(sellingPrices([7], [], players, 9).get(7), 56);
+  assert.equal(sellingPrices([7], [], players, 1).get(7), 53);
+});

@@ -70,3 +70,12 @@ test('no transfers means no hit: a quiet week never pays for free-transfer paddi
   for (const g of plan.gameweeks) if (g.in.length === 0) assert.equal(g.hitPoints, 0);
   assert.ok(plan.gameweeks.every((g) => g.hitPoints <= 0));
 });
+
+test('a Wildcard week can change more players than there are free transfers', () => {
+  const p0 = pool();
+  const worst = solver.solveSquad({ players: p0.map((p) => ({ ...p, points: [-p.points[0]] })), budget: 1000, gwIndex: 0 });
+  const sell = sellAll(worst.squad, p0);
+  const plan = run(p0, worst.squad, sell, 1, { chips: { 0: 'wildcard' } });
+  assert.ok(plan.gameweeks[0].in.length > 1, 'wildcard moved ' + plan.gameweeks[0].in.length);
+  assert.equal(plan.gameweeks[0].hitPoints, 0);
+});

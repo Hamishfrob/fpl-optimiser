@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { isStale, money, nextFixtures, groupByClub } from '../src/view.js';
+import { isStale, money, nextFixtures, groupByClub, pairMoves } from '../src/view.js';
 
 const NOW = new Date('2026-10-25T12:00:00Z');
 test('data 35 hours old is fresh, 37 hours old is stale', () => {
@@ -26,4 +26,14 @@ test('groupByClub groups player ids by team, biggest group first, then alphabeti
   const players = [{ id: 10, team: 2 }, { id: 11, team: 1 }, { id: 12, team: 1 }, { id: 13, team: 3 }];
   const g = groupByClub([10, 11, 12, 13], players, teams.map((t) => ({ ...t, name: t.short_name })));
   assert.deepEqual(g.map((x) => [x.team.id, x.ids]), [[1, [11, 12]], [2, [10]], [3, [13]]]);
+});
+
+test('pairMoves matches each sale with a purchase in the same position', () => {
+  const pos = new Map([[1, 'DEF'], [2, 'MID'], [3, 'MID'], [4, 'DEF']]);
+  const pairs = pairMoves([1, 2], [3, 4], (id) => pos.get(id));
+  assert.deepEqual(pairs.map((p) => [p.out, p.in]), [[1, 4], [2, 3]]);
+});
+test('pairMoves still returns every sale and purchase when positions do not line up', () => {
+  const pairs = pairMoves([1], [2], (id) => (id === 1 ? 'DEF' : 'MID'));
+  assert.deepEqual(pairs.map((p) => [p.out, p.in]), [[1, 2]]);
 });
