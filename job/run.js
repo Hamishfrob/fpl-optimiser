@@ -48,7 +48,9 @@ export async function runDaily({ outDir, entryId, fetchers = real, now = new Dat
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+  // Optional: node job/run.js --entry 1 --out data-test  (try the page with any public team's squad)
+  const arg = (n) => { const i = process.argv.indexOf(n); return i > 0 ? process.argv[i + 1] : undefined; };
   const { entryId } = JSON.parse(readFileSync(join(root, 'config.json'), 'utf8'));
-  const advice = await runDaily({ outDir: join(root, 'data'), entryId });
+  const advice = await runDaily({ outDir: join(root, arg('--out') ?? 'data'), entryId: Number(arg('--entry') ?? entryId) });
   console.log(`Wrote data for gameweek ${advice.gw} (${advice.mode}).`);
 }

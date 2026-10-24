@@ -51,6 +51,7 @@ test('with picks: writes data/squad/gw8.json and an advice file with transfers a
   const advice = JSON.parse(readFileSync(join(dir, 'advice', '2026-10-24.json')));
   assert.equal(advice.mode, 'transfers');
   assert.ok(Array.isArray(advice.plan) && advice.chips.length === 4);
+  assert.deepEqual(advice.plan.map((g) => g.gw), [9, 10], 'plan weeks carry real gameweek numbers');
 });
 
 test('earlier gameweek squad files are never touched', async () => {

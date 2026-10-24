@@ -38,7 +38,7 @@ export function computeAdvice({ bootstrap, fplFixtures, oddsRows, entry, solver,
     squadIds.forEach((id) => mention.add(id));
     plan.gameweeks.forEach((g) => { g.in.forEach((id) => mention.add(id)); g.xi.forEach((id) => mention.add(id)); });
     advice = { date, gw, mode: 'transfers', squad: squadIds, freeTransfers, bank, chipEntitlementVerified: false, totalGain: plan.totalGain,
-      plan: plan.gameweeks.map((g) => ({ gw: g.gw, in: g.in, out: g.out, hitPoints: g.hitPoints, captain: g.captain, xi: g.xi, bench: g.bench, points: g.points })),
+      plan: plan.gameweeks.map((g, i) => ({ gw: gw + i, in: g.in, out: g.out, hitPoints: g.hitPoints, captain: g.captain, xi: g.xi, bench: g.bench, points: g.points })),
       chips: chips.map((c) => ({ ...c, squadIfNow: c.squadIfNow && { squad: c.squadIfNow.squad, xi: c.squadIfNow.xi, bench: c.squadIfNow.bench, captain: c.squadIfNow.captain } })) };
     chips.forEach((c) => c.squadIfNow?.squad.forEach((id) => mention.add(id)));
   }
