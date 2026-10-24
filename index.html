@@ -11,6 +11,7 @@
 <header class="top">
   <h1>FPL Optimiser</h1>
   <p id="sub" class="sub">Loading…</p>
+  <button id="how-btn" class="go ghost" type="button">How the predictions work</button>
 </header>
 <div id="warn" class="warn" hidden></div>
 <main id="main">
@@ -19,6 +20,29 @@
 <footer class="foot">
   Advice only. You make the moves on the FPL site. Predictions are estimates, not promises.
 </footer>
+<dialog id="how" aria-labelledby="how-title">
+  <form method="dialog" class="how-close"><button class="go ghost" aria-label="Close">Close</button></form>
+  <h2 id="how-title">How the predictions work</h2>
+  <p>Every number on this page is an estimate of the points a player will score in one gameweek, worked out the same way for every player in the league. It's an average of what could happen. A striker predicted 5.0 will usually score 2 or 8, and almost never 5.</p>
+  <ol>
+    <li>Will he play? We start with the FPL injury and fitness news. A player the site gives a 75% chance of playing gets 75% of his points for the next round. After that we assume he's fit.</li>
+    <li>How much does he usually play? We look at the share of his club's minutes he has played this season. A regular starter counts as nearly a full match, and a bench player as a fraction of one.</li>
+    <li>What does he score when he plays? His expected goals and expected assists per 90 minutes this season (how good his chances were, whether or not they went in) become goal and assist points at the FPL rate for his position. Goalkeepers and defenders also get clean-sheet points, midfielders a small clean-sheet bonus, and goalkeepers points for saves. Defensive work, bonus points and cards are added at his season rate. A player with few minutes is blended towards the average for his position, so one lucky game doesn't make a star.</li>
+    <li>Who is he playing? We adjust for the match. If his club is expected to score a lot against a weak side, goals and clean sheets are worth more. Those expectations come from bookmaker odds when we have them, which usually appear a few days before a round, and otherwise from each club's results so far this season. A number with a ~ uses the second method and is rougher.</li>
+    <li>Add it up. A double gameweek adds both matches, and a blank gameweek is zero.</li>
+  </ol>
+  <h3>How the chip advice works</h3>
+  <p>For each chip the page compares your predicted points over the next four gameweeks with and without it, and picks the best of those weeks.</p>
+  <ul>
+    <li>Bench Boost: the points your bench is predicted to score that week.</li>
+    <li>Triple Captain: your captain's predicted points that week, which is the extra you'd gain over a normal captaincy.</li>
+    <li>Wildcard: it rebuilds your best squad from that week and checks how much more it scores than ordinary transfers would.</li>
+    <li>Free Hit: the best possible squad for that one week, against your own squad for the same week.</li>
+  </ul>
+  <p>"Play now" shows only when this week is the best of the four and the gain is at least 4 points. The advice looks four weeks ahead, so a big double gameweek further out won't show yet. It also doesn't push you to use a chip just because the Gameweek 19 deadline is getting close.</p>
+  <h3>What it doesn't know</h3>
+  <p>It hasn't been tested against past seasons. It doesn't know the manager's plans, rotation or who is taking penalties beyond what's already in the season numbers, and early in the season those numbers are thin. Football is random. Use the page to narrow a decision down, then check the injury news yourself.</p>
+</dialog>
 <script type="module" src="web/app.js"></script>
 </body>
 </html>

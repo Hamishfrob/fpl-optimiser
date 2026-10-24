@@ -12,6 +12,8 @@ const CHIP_INFO = {
   '3xc': ['Triple Captain', 'Your captain scores triple points instead of double, for one gameweek.'],
 };
 const $ = (id) => document.getElementById(id);
+$('how-btn').addEventListener('click', () => { $('how').showModal(); $('how').scrollTop = 0; });
+$('how').addEventListener('click', (e) => { if (e.target === $('how')) $('how').close(); }); // click outside to close
 const h = (tag, props = {}, ...kids) => {
   const e = Object.assign(document.createElement(tag), props);
   for (const k of kids.flat()) if (k != null) e.append(k);
