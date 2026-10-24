@@ -2,6 +2,8 @@
 
 This is a web page that suggests who to pick for your Fantasy Premier League team (Hlfcfc). It only advises. You make every move yourself on the FPL site.
 
+The address is https://hamishfrob.github.io/fpl-optimiser/ . On a phone, open it in the browser and use Add to Home Screen so it opens like an app.
+
 ## What the page shows
 
 - **Before your first deadline:** the FPL site hides your team from everyone, including this page. So your team is saved by hand in `my-squad.json` (copied from the Pick Team screen on 24 October), and the page shows it with predicted points for each player, your captain and a comparison with the best lineup from the same 15. If you change your team before the deadline, tell Hamish, or type the new team into the box at the bottom of the page (it's remembered in that browser only).

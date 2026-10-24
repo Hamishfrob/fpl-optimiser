@@ -1,6 +1,6 @@
 # FPL Optimiser
 
-A web page that recommends a Fantasy Premier League squad, this week's transfers and when to play each chip. It runs in the browser, so it works on a Chromebook, and it uses only free data.
+Live at https://hamishfrob.github.io/fpl-optimiser/ . A web page that recommends a Fantasy Premier League squad, this week's transfers and when to play each chip. It runs in the browser, so it works on a Chromebook, and it uses only free data.
 
 For the person using it, read `docs/HANDOVER.md`.
 
