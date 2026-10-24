@@ -58,3 +58,19 @@ test('in the second half chips are advised across Gameweeks 20 to 38', () => {
   const advice = evaluateChips(solver, setup(pool({ 3: 5 }), { currentGw: 21, windowEndGw: 38 }));
   assert.equal(find(advice, 'bboost').bestGw, 24);
 });
+
+test('every chip carries the detail the page needs to explain what it means for the squad', () => {
+  const advice = evaluateChips(solver, setup(pool({ 2: 2 })));
+  assert.equal(find(advice, 'bboost').detail.bench.length, 4);
+  assert.equal(typeof find(advice, '3xc').detail.captain, 'number');
+  for (const chip of ['wildcard', 'freehit']) {
+    const d = find(advice, chip).detail;
+    assert.equal(d.squad.length, 15); assert.equal(d.xi.length, 11);
+  }
+});
+
+test('a chip that is blocked this week is never advised for this week', () => {
+  const advice = evaluateChips(solver, setup(pool({ 0: 3 }), { blockedNow: ['wildcard', 'freehit'] }));
+  for (const chip of ['wildcard', 'freehit']) { assert.notEqual(find(advice, chip).bestGw, 10); assert.equal(find(advice, chip).playNow, false); }
+  assert.equal(find(advice, 'bboost').bestGw, 10);
+});

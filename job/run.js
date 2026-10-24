@@ -14,7 +14,7 @@ const PLAYER_FIELDS = ['id', 'web_name', 'team', 'element_type', 'now_cost', 'co
   'saves_per_90', 'yellow_cards', 'red_cards', 'bonus', 'selected_by_percent', 'form', 'total_points', 'expected_goals', 'expected_assists'];
 const pick = (o, keys) => Object.fromEntries(keys.map((k) => [k, o[k]]));
 
-export async function runDaily({ outDir, entryId, fetchers = real, now = new Date(), horizon }) {
+export async function runDaily({ outDir, entryId, fetchers = real, now = new Date(), horizon, manualSquad = null }) {
   const [bootstrap, fplFixtures, oddsCsv, entry] = await Promise.all([
     fetchers.fetchBootstrap(), fetchers.fetchFixtures(), fetchers.fetchOddsCsv(), fetchers.fetchEntry(entryId)]);
   const oddsRows = parseFixturesCsv(oddsCsv);
@@ -22,6 +22,11 @@ export async function runDaily({ outDir, entryId, fetchers = real, now = new Dat
   const date = now.toISOString().slice(0, 10);
   // In a Free Hit week the feed shows the temporary squad, which reverts at the next deadline: plan from the squad before it.
   let planEntry = entry;
+  // Before the site shows the squad, use one typed in by hand (my-squad.json): {ids: [15 player ids], bank: tenths of £m}
+  if (!entry.picks && manualSquad) {
+    planEntry = { ...entry, squadSource: 'manual', history: { current: [], chips: [] }, transfers: [],
+      picks: { picks: manualPicks(manualSquad), entry_history: { event: 0, bank: manualSquad.bank ?? 0 }, active_chip: null } };
+  }
   if (entry.picks?.active_chip === 'freehit') {
     try {
       const prev = JSON.parse(readFileSync(join(outDir, 'squad', `gw${entry.picks.entry_history.event - 1}.json`), 'utf8'));
@@ -59,6 +64,15 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
   // Optional: node job/run.js --entry 1 --out data-test  (try the page with any public team's squad)
   const arg = (n) => { const i = process.argv.indexOf(n); return i > 0 ? process.argv[i + 1] : undefined; };
   const { entryId } = JSON.parse(readFileSync(join(root, 'config.json'), 'utf8'));
-  const advice = await runDaily({ outDir: join(root, arg('--out') ?? 'data'), entryId: Number(arg('--entry') ?? entryId) });
+  let manualSquad = null;
+  try { manualSquad = JSON.parse(readFileSync(join(root, 'my-squad.json'), 'utf8')); } catch { /* no hand-entered squad */ }
+  const advice = await runDaily({ outDir: join(root, arg('--out') ?? 'data'), entryId: Number(arg('--entry') ?? entryId), manualSquad: arg('--entry') ? null : manualSquad });
   console.log(`Wrote data for gameweek ${advice.gw} (${advice.mode}).`);
+}
+
+// my-squad.json may list the starting XI and captains as picked: {ids, xi?: [11 ids], captain?, viceCaptain?, bank}
+function manualPicks({ ids, xi, captain, viceCaptain }) {
+  if (!xi) return ids.map((element) => ({ element }));
+  const order = [...xi, ...ids.filter((id) => !xi.includes(id))];
+  return order.map((element, i) => ({ element, position: i + 1, is_captain: element === captain, is_vice_captain: element === viceCaptain }));
 }

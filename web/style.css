@@ -62,3 +62,33 @@ button.go[disabled] { opacity: .5; cursor: wait; }
 .foot { color: var(--muted); font-size: .85rem; padding-top: 24px; padding-bottom: 40px; }
 @media (max-width: 520px) { .band .meta { display: none; } .big { font-size: 1.25rem; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* your team, chips, highlighted bands */
+h2.first { margin-top: 0; }
+.card.team { border-color: #5b6b8a; }
+.label { margin: 14px 0 2px; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.rows li.colhead { color: var(--muted); font-size: .75rem; }
+.rows li.mine { background: linear-gradient(90deg, rgba(255,255,255,.07), transparent); border-radius: 4px; padding-left: 6px; }
+.rows .pts { width: 3.2em; text-align: right; }
+.rows .name .pts { width: auto; text-align: left; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; flex: none; align-self: center; }
+.tag.vc { background: #d9d9e3; }
+button.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); margin-top: 12px; }
+.chips h2 { margin-bottom: 4px; }
+.chipgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin: 12px 0; }
+.chip { background: var(--band); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.chip h4 { margin: 0 0 2px; font-size: 1.05rem; }
+.chip p { margin: 6px 0; }
+.chip .means { border-top: 1px solid var(--line); padding-top: 8px; font-size: .92rem; }
+.card.sug summary, details.card summary { cursor: pointer; font-weight: 600; }
+.entry { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 8px; margin: 10px 0; }
+.entry input { background: var(--page); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; font: inherit; width: 100%; }
+.band .badge { display: inline-block; margin-left: 10px; min-width: 1.6em; text-align: center; padding: 0 6px; border-radius: 99px; background: var(--glow); color: #101114; font-size: .8rem; }
+.band.open .badge { background: var(--text); color: var(--fill); }
+.band:not(.has) { opacity: .72; }
+.band:not(.has).open { opacity: 1; }
+.band.has { border-left-width: 16px; background: #2b2e36; }
+.band .meta b { color: var(--ink); font-weight: 600; }
+.band.open .meta b { color: var(--text); }
+.band .body .rows li { flex-wrap: nowrap; }
+.slot { width: 3.2em; flex: none; text-align: left; }

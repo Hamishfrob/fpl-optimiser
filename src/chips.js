@@ -5,11 +5,11 @@ const MIN_GAIN_NOW = 4; // points; a smaller gain is not worth spending a chip o
 
 /**
  * @param {{solveSquad:Function, planTransfers:Function}} solver from createSolver
- * @param {object} input planner input plus {chipsAvailable: string[], currentGw: number, windowEndGw: number (19 in the first half, 38 in the second)}
+ * @param {object} input planner input plus {chipsAvailable: string[], currentGw: number, windowEndGw: number (19 in the first half, 38 in the second), blockedNow?: string[] chips that cannot be played this gameweek}
  * @returns {{chip:string, bestGw:number|null, gainVsNoChip:number, playNow:boolean, squadIfNow?:object}[]}
  */
 export function evaluateChips(solver, input) {
-  const { chipsAvailable, currentGw, windowEndGw, horizon, gwFrom, players } = input;
+  const { chipsAvailable, currentGw, windowEndGw, horizon, gwFrom, players, blockedNow = [] } = input;
   const byId = new Map(players.map((p) => [p.id, p]));
   const pts = (id, t) => byId.get(id).points[gwFrom + t] ?? 0;
   const weeks = [...Array(horizon).keys()].filter((t) => currentGw + t <= windowEndGw);
@@ -19,17 +19,18 @@ export function evaluateChips(solver, input) {
   return chipsAvailable.map((chip) => {
     const options = []; // {t, gain, squad?}
     for (const t of weeks) {
+      if (t === 0 && blockedNow.includes(chip)) continue; // e.g. Wildcard and Free Hit cannot be played in a manager's first gameweek
       const g = base.gameweeks[t];
-      if (chip === 'bboost') options.push({ t, gain: g.bench.reduce((a, id) => a + pts(id, t), 0) });
-      else if (chip === '3xc') options.push({ t, gain: pts(g.captain, t) });
+      if (chip === 'bboost') options.push({ t, gain: g.bench.reduce((a, id) => a + pts(id, t), 0), detail: { bench: g.bench } });
+      else if (chip === '3xc') options.push({ t, gain: pts(g.captain, t), detail: { captain: g.captain } });
       else if (chip === 'freehit') {
         if (currentGw + t === 1) continue; // Free Hit cannot be played in Gameweek 1
         const best = solver.solveSquad({ players, budget: value, gwIndex: gwFrom + t });
-        options.push({ t, gain: best.points - g.points, squad: best });
+        options.push({ t, gain: best.points - g.points, squad: best, detail: best });
       } else if (chip === 'wildcard') {
         try {
           const plan = solver.planTransfers({ ...input, chips: { [t]: 'wildcard' } });
-          options.push({ t, gain: plan.totalPoints - base.totalPoints, squad: plan.gameweeks[t] });
+          options.push({ t, gain: plan.totalPoints - base.totalPoints, squad: plan.gameweeks[t], detail: plan.gameweeks[t] });
         } catch { /* solver timed out for this week: leave it out rather than guess */ }
       }
     }
@@ -37,6 +38,6 @@ export function evaluateChips(solver, input) {
     const best = options.reduce((a, b) => (b.gain > a.gain ? b : a));
     const bestGw = currentGw + best.t;
     const playNow = best.t === 0 && best.gain >= MIN_GAIN_NOW;
-    return { chip, bestGw, gainVsNoChip: best.gain, playNow, ...(playNow && best.squad ? { squadIfNow: best.squad } : {}) };
+    return { chip, bestGw, gainVsNoChip: best.gain, playNow, detail: best.detail, ...(playNow && best.squad ? { squadIfNow: best.squad } : {}) };
   });
 }

@@ -78,3 +78,46 @@ test('during a Free Hit week the plan starts from the squad that comes back, not
   const advice = await runDaily({ outDir: dir, entryId: 11160462, fetchers: fetchers({ picks: temp, activeChip: 'freehit' }), now: NOW, horizon: 2 });
   assert.deepEqual([...advice.squad].sort((a, b) => a - b), real.map((p) => p.element).sort((a, b) => a - b));
 });
+
+test('advice carries predicted points for every player so the page can score any typed-in team', async () => {
+  const dir = out();
+  const advice = await runDaily({ outDir: dir, entryId: 11160462, fetchers: fetchers(), now: NOW, horizon: 2 });
+  assert.equal(Object.keys(advice.projections).length, boot.elements.length);
+  assert.equal(advice.projections[boot.elements[0].id].length, 2);
+});
+
+test('a hand-entered squad drives transfers and chips before the site shows the real one', async () => {
+  const dir = out();
+  const ids = legalPicks().map((p) => p.element);
+  const advice = await runDaily({ outDir: dir, entryId: 11160462, fetchers: fetchers(), now: NOW, horizon: 2, manualSquad: { ids, bank: 5 } });
+  assert.equal(advice.mode, 'transfers');
+  assert.equal(advice.squadSource, 'manual');
+  assert.deepEqual([...advice.squad].sort((a, b) => a - b), [...ids].sort((a, b) => a - b));
+  assert.equal(advice.freeTransfers, 5, 'before the first deadline every change is free');
+  assert.equal(advice.suggested.squad.length, 15, 'the from-scratch suggestion is kept for comparison');
+  assert.equal(JSON.parse(readFileSync(join(dir, 'status.json'))).squadAvailable, false);
+});
+test('a squad that came from the site is labelled site and has no from-scratch suggestion', async () => {
+  const dir = out();
+  const advice = await runDaily({ outDir: dir, entryId: 11160462, fetchers: fetchers({ picks: legalPicks() }), now: NOW, horizon: 2 });
+  assert.equal(advice.squadSource, 'site');
+  assert.equal(advice.suggested, undefined);
+});
+
+test('a hand-entered lineup is kept: starters, bench, captain and vice-captain come back as picked', async () => {
+  const dir = out();
+  const ids = legalPicks().map((p) => p.element);
+  const manual = { ids, bank: 12, xi: ids.slice(0, 11), captain: ids[3], viceCaptain: ids[0] };
+  const advice = await runDaily({ outDir: dir, entryId: 11160462, fetchers: fetchers(), now: NOW, horizon: 2, manualSquad: manual });
+  assert.deepEqual(advice.lineup.xi, ids.slice(0, 11));
+  assert.deepEqual(advice.lineup.bench, ids.slice(11));
+  assert.equal(advice.lineup.captain, ids[3]);
+  assert.equal(advice.lineup.viceCaptain, ids[0]);
+  assert.equal(advice.bank, 12);
+});
+test('before the first deadline Wildcard and Free Hit are not offered for the first gameweek', async () => {
+  const dir = out();
+  const ids = legalPicks().map((p) => p.element);
+  const advice = await runDaily({ outDir: dir, entryId: 11160462, fetchers: fetchers(), now: NOW, horizon: 3, manualSquad: { ids, bank: 5 } });
+  for (const c of advice.chips) if (c.chip === 'wildcard' || c.chip === 'freehit') { assert.notEqual(c.bestGw, advice.gw); assert.equal(c.playNow, false); }
+});

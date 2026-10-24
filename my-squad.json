@@ -1,0 +1,10 @@
+{
+  "note": "Harvey's team as shown on the FPL Pick Team screen, screenshot taken 2026-10-24 17:30 (Gameweek 9, before the first deadline). Bank is an estimate: £100.0m minus the squad's current prices. Delete this file after 31 Oct 2026 11:00 UTC once the FPL site shows the squad itself.",
+  "ids": [1, 579, 504, 31, 304, 427, 400, 13, 369, 411, 165, 109, 200, 375, 79],
+  "xi": [1, 579, 504, 31, 304, 427, 400, 13, 369, 411, 165],
+  "captain": 411,
+  "viceCaptain": 1,
+  "bank": 12,
+  "bankIsEstimate": true,
+  "chipsUnavailableThisWeek": ["wildcard", "freehit"]
+}
