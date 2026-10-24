@@ -44,3 +44,11 @@ One idea, built as a picture made from Harvey's own data: the top of the page is
 - Checked at 1100px and 390px wide; ticker scrolls sideways inside its card on phones.
 - Not done: no light mode, no crowd-noise effects, no club-badge imagery (deliberate).
 - Weakest points still open: seat colours and grass greens are by eye, not measured; scoreboard and stand redraw every frame/second (cheap, but untested on a real Chromebook).
+
+## Round 2, 2026-10-24: Blender textures and colour per section
+
+- Textures rendered in Blender 5.2 (Cycles, 96 samples, headless) from seamless patterns made in code: `design/blender/make_maps.py`, `render_tiles.py`, `finish_tiles.py`. Output `web/img/grass.webp` (23 KB), `steel.webp` (12 KB), `seats.webp` (6 KB), 41 KB in all. Seam check by number: seam difference within 1 grey level of the neighbouring pixel difference for grass and seats; the steel truss has a slightly stronger join at its top and bottom edge (9.3 against 6.8) because the chord is split across the seam, not visible when tiled.
+- Where each is used: grass on the pitch, steel on the chips gantry (with a row of floodlight bulbs), the fixtures card strip and the footer line, seats on the transfers card.
+- Section colours: team card deep green, transfers red seats, fixtures night blue, suggested squad dark gold, team entry steel blue, headings as red ribbons.
+- Chips rebuilt: one colour each (Wildcard gold, Free Hit cyan, Bench Boost red, Triple Captain orange), icon, big gain number, "play now" glow in the chip's own colour, used chips greyed.
+- Not done: the seat texture is subdued under a dark overlay so text stays readable. Colours still judged by eye.

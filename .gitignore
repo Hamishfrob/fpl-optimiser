@@ -2,3 +2,5 @@ node_modules/
 .superpowers/
 *.log
 data-test/
+design/blender/maps/
+design/blender/renders/

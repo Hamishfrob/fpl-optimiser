@@ -13,6 +13,12 @@ const CHIP_INFO = {
   bboost: ['Bench Boost', 'Your four bench players score points too, for one gameweek.'],
   '3xc': ['Triple Captain', 'Your captain scores triple points instead of double, for one gameweek.'],
 };
+const CHIP_ICONS = {
+  wildcard: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.8-6.3 3.8 1.7-7L2 9.2l7.1-.6z"/></svg>',
+  freehit: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg>',
+  bboost: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14h18v3H3zM5 17h2v4H5zm12 0h2v4h-2zM6 4h12v8H6z"/></svg>',
+  '3xc': '<svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="17" text-anchor="middle" font-size="13" font-weight="800">3x</text></svg>',
+};
 const $ = (id) => document.getElementById(id);
 $('how-btn').addEventListener('click', () => { $('how').showModal(); $('how').scrollTop = 0; });
 $('how').addEventListener('click', (e) => { if (e.target === $('how')) $('how').close(); }); // click outside to close
@@ -149,7 +155,7 @@ function render(d, advice) {
   if (advice.mode === 'transfers') {
     const g0 = advice.plan[0];
     const moves = (g) => pairMoves(g.out, g.in, posOf).map((m) => `${nameOf(m.out)} → ${nameOf(m.in)}`);
-    main.append(h('section', { className: 'card' }, h('h3', {}, 'Transfers'),
+    main.append(h('section', { className: 'card moves' }, h('h3', {}, 'Transfers'),
       h('div', { className: 'big' }, g0.in.length ? moves(g0).join(',  ') : 'Make no transfers'),
       h('p', { className: 'muted' }, advice.squadSource === 'manual'
         ? `Before your first deadline every change is free, so treat this as a suggestion. Bank ${money(advice.bank)}.`
@@ -161,19 +167,23 @@ function render(d, advice) {
 
   if (advice.mode === 'transfers') {
     const tctx = { advice, players, teams: new Map(bootstrap.teams.map((t) => [t.id, t])), fixtures, clubs: CLUBS, nameOf };
-    main.append(h('section', { className: 'card' }, h('h2', { className: 'first' }, 'Next four matches for your clubs'), tickerView(tctx, mine)));
+    main.append(h('section', { className: 'card fixtures' }, h('h2', { className: 'first' }, 'Next four matches for your clubs'), tickerView(tctx, mine)));
   }
 
   // ---- 3. CHIPS
   const chipCards = Object.entries(CHIP_INFO).map(([key, [label, blurb]]) => {
     const c = advice.chips?.find((x) => x.chip === key);
-    const card = h('div', { className: `chip${c?.playNow ? ' play' : ''}` }, h('h4', {}, label), h('p', { className: 'muted' }, blurb));
+    const used = advice.mode === 'transfers' && !c;
+    const card = h('div', { className: `chip c-${key}${c?.playNow ? ' play' : ''}${used ? ' used' : ''}` });
+    const icon = h('span', { className: 'icon' }); icon.innerHTML = CHIP_ICONS[key]; // fixed strings above, no data in them
+    const status = advice.mode !== 'transfers' ? null : used ? ['hold', 'USED'] : c.playNow ? ['buy', 'PLAY NOW'] : ['hold', 'HOLD'];
+    card.append(h('div', { className: 'chiphead' }, icon, h('div', { className: 'ct' }, h('h4', {}, label)),
+      status ? h('span', { className: `tag ${status[0]}` }, status[1]) : null), h('p', { className: 'muted blurb' }, blurb));
     if (advice.mode !== 'transfers') { card.append(h('p', {}, 'Type in your team to see what this would do for it.')); return card; }
-    if (!c) { card.append(h('span', { className: 'tag hold' }, 'USED'), h('p', { className: 'muted' }, 'Already played in this half of the season.')); return card; }
-    if (!c.bestGw) { card.append(h('span', { className: 'tag hold' }, 'HOLD'), h('p', {}, 'No good week in the next four.')); return card; }
+    if (used) { card.append(h('p', { className: 'muted' }, 'Already played in this half of the season.')); return card; }
+    if (!c.bestGw) { card.append(h('p', {}, 'No good week in the next four.')); return card; }
     const k = c.bestGw - advice.gw, d2 = c.detail ?? {};
-    card.append(h('span', { className: `tag ${c.playNow ? 'buy' : 'hold'}` }, c.playNow ? 'PLAY NOW' : 'HOLD'),
-      h('p', {}, `Best in GW${c.bestGw}: about ${c.gainVsNoChip >= 1 ? '+' : ''}${c.gainVsNoChip.toFixed(0)} points.`));
+    card.append(h('div', { className: 'gain' }, h('b', {}, `${c.gainVsNoChip >= 1 ? '+' : ''}${c.gainVsNoChip.toFixed(0)}`), h('span', {}, `points, best in GW${c.bestGw}`)));
     let means = '';
     if (key === 'bboost' && d2.bench) means = `Your bench would add ${d2.bench.map((id) => `${nameOf(id)} ${proj(id, k).toFixed(1)}`).join(', ')}.`;
     else if (key === '3xc' && d2.captain) means = `${nameOf(d2.captain)} is predicted ${proj(d2.captain, k).toFixed(1)}, so tripling him adds about ${proj(d2.captain, k).toFixed(0)} points over a normal captaincy.`;
@@ -186,7 +196,7 @@ function render(d, advice) {
     card.append(h('p', { className: 'means' }, h('strong', {}, 'For your team: '), means));
     return card;
   });
-  main.append(h('section', { className: 'chips' }, h('h2', {}, 'Chips'),
+  main.append(h('section', { className: 'chips' }, h('div', { className: 'gantry' }, h('h2', {}, 'Chips')),
     h('p', { className: 'muted' }, `You get two sets of the four chips this season. The first set has to be played before the Gameweek 19 deadline (Saturday 2 January, 13:30). Whether the second set arrives as normal for a late joiner is not confirmed.${advice.squadSource === 'manual' ? ' In your first gameweek Wildcard and Free Hit are unavailable, as the FPL site shows. Bench Boost and Triple Captain can be played.' : ''}`),
     h('div', { className: 'chipgrid' }, chipCards)));
 
