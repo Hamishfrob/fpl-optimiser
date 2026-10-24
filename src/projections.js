@@ -1,5 +1,5 @@
 // Expected FPL points per player per gameweek. Version 1: simple and explainable, replaceable later.
-import rulesJson from './rules.json' with { type: 'json' };
+import rulesJson from './rules.js';
 import { impliedGoals } from './odds.js';
 import { oddsNameToTeamId } from './teams.js';
 import { teamStrengths, fixtureExpectations } from './ratings.js';

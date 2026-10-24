@@ -58,7 +58,7 @@ export function solveSquad(highs, { players, budget, gwIndex, locked = [], banne
 }
 
 const POOL_PER_POSITION = { 1: 12, 2: 40, 3: 45, 4: 25 };
-const SOLVE_OPTIONS = { time_limit: 25, mip_rel_gap: 0.005 };
+const SOLVE_OPTIONS = { time_limit: 10, mip_rel_gap: 0.01 }; // best answer found in 10 s is good enough for advice
 const FT_USE_PENALTY = 0.2; // stops trivial transfers, as in open-fpl-solver
 
 /**
@@ -133,7 +133,9 @@ export function planTransfers(highs, input) {
     const on = (pre, p) => v(`${pre}${p.id}_${t}`) > 0.5;
     const squad = players.filter((p) => on('s', p)).map((p) => p.id);
     const xi = squad.filter((id) => on('x', byId.get(id)));
-    const captain = players.find((p) => on('c', p)).id;
+    const capPlayer = players.find((p) => on('c', p));
+    if (!capPlayer) throw new Error('No legal plan'); // the solver ran out of time before finding any plan
+    const captain = capPlayer.id;
     const inn = players.filter((p) => on('i', p)).map((p) => p.id), outt = players.filter((p) => on('o', p)).map((p) => p.id);
     const hit = wild(t) ? 0 : -hitCost * Math.round(v(`h${t}`)) + 0; // + 0 turns -0 into 0
     const bench = squad.filter((id) => !xi.includes(id));

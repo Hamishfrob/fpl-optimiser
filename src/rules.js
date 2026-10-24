@@ -1,0 +1,42 @@
+// Scoring rules. Source and unverified items are recorded in the fields below.
+export default {
+  "source": "premierleague.com FPL scoring guide (standard values) and beatfpl.com/guides/fpl-26-27-rules-changes (2026/27 changes), read 2026-10-24",
+  "unverified": [
+    "goal_gk (10, single source: beatfpl.com says up from 6)",
+    "assist, clean_sheet, goals_conceded, saves, cards and own goal values are the long-standing classic values; not re-read on an official 2026/27 page"
+  ],
+  "appearance_full": 2,
+  "goal": {
+    "GKP": 10,
+    "DEF": 6,
+    "MID": 5,
+    "FWD": 4
+  },
+  "assist": 3,
+  "clean_sheet": {
+    "GKP": 4,
+    "DEF": 4,
+    "MID": 1,
+    "FWD": 0
+  },
+  "goals_conceded_per_2": {
+    "GKP": -1,
+    "DEF": -1,
+    "MID": 0,
+    "FWD": 0
+  },
+  "save_per_3": 1,
+  "yellow": -1,
+  "red": -3,
+  "defcon": {
+    "points": 2,
+    "threshold": {
+      "GKP": 0,
+      "DEF": 10,
+      "MID": 12,
+      "FWD": 12
+    }
+  },
+  "league_avg_goals": 1.35,
+  "shrink_minutes": 450
+};

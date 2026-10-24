@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { expectedPoints, projectAll } from '../src/projections.js';
 import { parseFixturesCsv } from '../src/odds.js';
 
-const rules = JSON.parse(readFileSync(new URL('../src/rules.json', import.meta.url)));
+import rules from '../src/rules.js';
 const boot = JSON.parse(readFileSync(new URL('./fixtures/bootstrap.json', import.meta.url)));
 const fx = JSON.parse(readFileSync(new URL('./fixtures/fpl-fixtures.json', import.meta.url)));
 const csv = readFileSync(new URL('./fixtures/fixtures.csv', import.meta.url), 'utf8');

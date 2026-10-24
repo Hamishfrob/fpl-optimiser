@@ -27,8 +27,10 @@ export function evaluateChips(solver, input) {
         const best = solver.solveSquad({ players, budget: value, gwIndex: gwFrom + t });
         options.push({ t, gain: best.points - g.points, squad: best });
       } else if (chip === 'wildcard') {
-        const plan = solver.planTransfers({ ...input, chips: { [t]: 'wildcard' } });
-        options.push({ t, gain: plan.totalPoints - base.totalPoints, squad: plan.gameweeks[t] });
+        try {
+          const plan = solver.planTransfers({ ...input, chips: { [t]: 'wildcard' } });
+          options.push({ t, gain: plan.totalPoints - base.totalPoints, squad: plan.gameweeks[t] });
+        } catch { /* solver timed out for this week: leave it out rather than guess */ }
       }
     }
     if (!options.length) return { chip, bestGw: null, gainVsNoChip: 0, playNow: false };
