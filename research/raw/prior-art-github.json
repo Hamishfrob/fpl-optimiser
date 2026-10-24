@@ -1,0 +1,3234 @@
+[
+  {
+    "createdAt": "2026-07-22T07:47:48Z",
+    "description": "fpl-optimizer",
+    "forksCount": 0,
+    "fullName": "stianwinther1976/fpl-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "TypeScript",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-10-18T15:41:36Z",
+    "url": "https://github.com/stianwinther1976/fpl-optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2022-11-04T09:22:28Z",
+    "description": "",
+    "forksCount": 1,
+    "fullName": "harald-page-profile/fpl-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 4,
+    "updatedAt": "2026-07-02T15:50:01Z",
+    "url": "https://github.com/harald-page-profile/fpl-optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2026-09-08T22:18:47Z",
+    "description": "FPL Optimizer",
+    "forksCount": 0,
+    "fullName": "bipulmainali/FPL_Opt",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-10-14T01:20:56Z",
+    "url": "https://github.com/bipulmainali/FPL_Opt",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2026-01-22T15:22:16Z",
+    "description": "FPL optimizer",
+    "forksCount": 0,
+    "fullName": "nage43-dev/fpl-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "CSS",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-01-22T23:00:20Z",
+    "url": "https://github.com/nage43-dev/fpl-optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2022-09-17T04:30:27Z",
+    "description": "My FPL optimizers",
+    "forksCount": 0,
+    "fullName": "hiracky16/fpl_optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2022-09-17T04:30:55Z",
+    "url": "https://github.com/hiracky16/fpl_optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2025-07-22T17:19:06Z",
+    "description": "FPL Optimization using AI",
+    "forksCount": 0,
+    "fullName": "axelsg/fplopti",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2025-08-04T21:12:51Z",
+    "url": "https://github.com/axelsg/fplopti",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2026-10-20T11:04:00Z",
+    "description": "Personal FPL optimizer dashboard",
+    "forksCount": 0,
+    "fullName": "vickyvyas124/the-one-above-all-fpl",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-10-24T15:14:34Z",
+    "url": "https://github.com/vickyvyas124/the-one-above-all-fpl",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2025-12-15T19:30:27Z",
+    "description": "Automated FPL optimization using Solio Analytics",
+    "forksCount": 0,
+    "fullName": "erikkgarcia/solio-cli",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 1,
+    "updatedAt": "2026-07-25T05:26:48Z",
+    "url": "https://github.com/erikkgarcia/solio-cli",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2026-03-06T02:36:13Z",
+    "description": "A Fantasy Premier League squad optimizer and points prediction engine",
+    "forksCount": 0,
+    "fullName": "SilverCityIndigo/fpl-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "JavaScript",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 2,
+    "updatedAt": "2026-08-20T17:25:23Z",
+    "url": "https://github.com/SilverCityIndigo/fpl-optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2022-07-28T13:03:34Z",
+    "description": "Python script that returns optimized FPL squads for different metrics",
+    "forksCount": 0,
+    "fullName": "prathamesh043/FPL-Optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 2,
+    "updatedAt": "2026-10-19T20:18:46Z",
+    "url": "https://github.com/prathamesh043/FPL-Optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2024-03-31T03:44:43Z",
+    "description": "This repository contains the source code for an optimizer model that evaluates a user's team and recommends optimal decision making regarding transfers and chip usage",
+    "forksCount": 0,
+    "fullName": "hkenawi/FPL-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 2,
+    "updatedAt": "2024-05-02T19:32:55Z",
+    "url": "https://github.com/hkenawi/FPL-optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2025-02-13T02:17:01Z",
+    "description": "Code for FPL optimizer project on Medium",
+    "forksCount": 0,
+    "fullName": "humzahmalik/fpl_optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 1,
+    "updatedAt": "2025-02-26T17:22:10Z",
+    "url": "https://github.com/humzahmalik/fpl_optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2026-08-21T09:18:25Z",
+    "description": "Data API for my FPL Optimizer GPT",
+    "forksCount": 0,
+    "fullName": "jwoodall96/fpl-optimizer-api",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-08-24T22:31:42Z",
+    "url": "https://github.com/jwoodall96/fpl-optimizer-api",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2022-08-13T03:11:56Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "IshanPoudel/FPLPlayerOptimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2022-08-13T03:12:24Z",
+    "url": "https://github.com/IshanPoudel/FPLPlayerOptimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2025-07-23T08:55:20Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "derealmax/FplOptimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2025-07-23T08:55:21Z",
+    "url": "https://github.com/derealmax/FplOptimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2026-09-21T14:05:45Z",
+    "description": "Mathematical FPL optimizer for transfers, starting XI, and captaincy recommendations.",
+    "forksCount": 0,
+    "fullName": "OptimusCoder10/fpl-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-10-24T10:15:31Z",
+    "url": "https://github.com/OptimusCoder10/fpl-optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2018-10-15T08:51:25Z",
+    "description": "FPL Optimizer selects the best possible fantasy premier league football team by using an expected points model to generate expected points (xP) for every player in Fantasy Premier League (https://fantasy.premierleague.com/) and then using a Linear Programming model to select the best possible combination of players given a limited budget (and other constraints). ",
+    "forksCount": 3,
+    "fullName": "spinalwiz/fpl-optimiser",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 7,
+    "updatedAt": "2025-08-15T00:30:31Z",
+    "url": "https://github.com/spinalwiz/fpl-optimiser",
+    "_queries": [
+      "fpl optimizer",
+      "fpl expected points",
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2026-02-27T21:46:32Z",
+    "description": "Centralized dashboard for monitoring AI agents (Job Application, Property Monitor, FPL Optimizer)",
+    "forksCount": 0,
+    "fullName": "patrick-obot/agent_dashboard",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-02-27T21:46:42Z",
+    "url": "https://github.com/patrick-obot/agent_dashboard",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2026-08-06T05:15:47Z",
+    "description": "Releases oficiais e bin\u00e1rios p\u00fablicos do FPL Optimizer para download e atualiza\u00e7\u00e3o autom\u00e1tica.",
+    "forksCount": 0,
+    "fullName": "fpltecnologia/fpl-optimizer-releases",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-08-06T05:17:17Z",
+    "url": "https://github.com/fpltecnologia/fpl-optimizer-releases",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2026-08-05T16:56:45Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "saimudigonda24/fpl-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-08-08T23:34:56Z",
+    "url": "https://github.com/saimudigonda24/fpl-optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2025-11-01T16:14:11Z",
+    "description": "Fantasy Premier League Team Optimizer",
+    "forksCount": 0,
+    "fullName": "zkutlow/fpl-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2025-11-01T16:50:06Z",
+    "url": "https://github.com/zkutlow/fpl-optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2025-01-26T22:39:42Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "nicolaskivimaki/fpl_optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2025-01-26T22:49:53Z",
+    "url": "https://github.com/nicolaskivimaki/fpl_optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2025-09-07T17:55:48Z",
+    "description": "Creating a warehouse for Fantasy Premier League (FPL) data, along with a model to predict and optimize an FPL team.",
+    "forksCount": 0,
+    "fullName": "simon-d-balisi/fpl-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2025-09-11T21:45:06Z",
+    "url": "https://github.com/simon-d-balisi/fpl-optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2026-08-21T01:43:15Z",
+    "description": "Fantasy Premier League web app for daily squad and transfer optimization",
+    "forksCount": 0,
+    "fullName": "optimize-is-my-jam/fpl-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-08-21T01:52:44Z",
+    "url": "https://github.com/optimize-is-my-jam/fpl-optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2026-06-12T02:14:35Z",
+    "description": "Repo for the FPL optimizer web app to help you look at the best what if scenarios and points you left on the table during your FPL season",
+    "forksCount": 0,
+    "fullName": "o-lares/FPL-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "TypeScript",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-06-13T22:42:38Z",
+    "url": "https://github.com/o-lares/FPL-optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2026-08-09T01:37:25Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "kipyegon-labs/fpl-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-08-16T18:56:43Z",
+    "url": "https://github.com/kipyegon-labs/fpl-optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2026-10-18T20:51:49Z",
+    "description": "Optimize your fantasy premier league player picks!",
+    "forksCount": 0,
+    "fullName": "DavidHowardDewi/FPL-Optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-10-18T20:52:58Z",
+    "url": "https://github.com/DavidHowardDewi/FPL-Optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2022-08-31T18:46:36Z",
+    "description": "Optimal FPL selection based on mixed integer programming.",
+    "forksCount": 0,
+    "fullName": "somiandras/fpl-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2022-09-01T05:41:53Z",
+    "url": "https://github.com/somiandras/fpl-optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2026-08-18T20:23:49Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "Helloworldceo/fpl-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "TypeScript",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-08-22T03:19:54Z",
+    "url": "https://github.com/Helloworldceo/fpl-optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2025-09-09T11:36:29Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "Isaacvdp/fpl-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2025-09-09T11:41:30Z",
+    "url": "https://github.com/Isaacvdp/fpl-optimizer",
+    "_queries": [
+      "fpl optimizer"
+    ]
+  },
+  {
+    "createdAt": "2022-08-06T06:12:42Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "dking949/fpl-transfers",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 3,
+    "updatedAt": "2025-04-28T00:08:25Z",
+    "url": "https://github.com/dking949/fpl-transfers",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2018-10-03T15:08:38Z",
+    "description": "Finds who made the worst transfers in your mini-league this week and sends the poor lad an e-mail letting him know.",
+    "forksCount": 0,
+    "fullName": "James-Fallon/fpl-transfer-abuse",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 2,
+    "updatedAt": "2021-11-22T11:35:35Z",
+    "url": "https://github.com/James-Fallon/fpl-transfer-abuse",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2025-11-04T19:24:15Z",
+    "description": "FPL Transfer",
+    "forksCount": 0,
+    "fullName": "zemskekure/fpl",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2025-11-04T19:24:15Z",
+    "url": "https://github.com/zemskekure/fpl",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2021-12-02T19:58:50Z",
+    "description": "A web app that helps fantasy premier league managers make the best transfer decision for their fantasy premier league teams.",
+    "forksCount": 0,
+    "fullName": "MashoAdo/fplTransferAssist",
+    "isArchived": false,
+    "isFork": false,
+    "language": "JavaScript",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2022-01-05T19:35:00Z",
+    "url": "https://github.com/MashoAdo/fplTransferAssist",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2026-03-09T19:47:33Z",
+    "description": "FPL transfer analyzer",
+    "forksCount": 0,
+    "fullName": "falseno9/fpl-transfer-rater",
+    "isArchived": false,
+    "isFork": false,
+    "language": "TypeScript",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-08-20T22:55:44Z",
+    "url": "https://github.com/falseno9/fpl-transfer-rater",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2026-02-20T18:08:59Z",
+    "description": "FPL Transfer Analysis Tool",
+    "forksCount": 0,
+    "fullName": "ShuttleJosh/My_FPL_Tool",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-02-20T21:16:01Z",
+    "url": "https://github.com/ShuttleJosh/My_FPL_Tool",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2021-03-03T18:39:36Z",
+    "description": "This app will allow FPL managers to schedule transfers",
+    "forksCount": 0,
+    "fullName": "grishaLR/FPL-Transfers",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 1,
+    "updatedAt": "2021-03-07T20:58:17Z",
+    "url": "https://github.com/grishaLR/FPL-Transfers",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2018-08-27T09:58:09Z",
+    "description": "Updated fpl transfer suggester chrome extension.",
+    "forksCount": 0,
+    "fullName": "mickygeehan/fpl-transfer-suggester-v2",
+    "isArchived": false,
+    "isFork": false,
+    "language": "TypeScript",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2018-08-27T10:01:31Z",
+    "url": "https://github.com/mickygeehan/fpl-transfer-suggester-v2",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2026-10-03T16:09:43Z",
+    "description": "Weekly FPL transfer/captain/H2H advice",
+    "forksCount": 0,
+    "fullName": "ch-augustedupin/fpl-assistant",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-10-23T10:06:31Z",
+    "url": "https://github.com/ch-augustedupin/fpl-assistant",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2024-12-26T23:26:40Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "YohannesDK/FPL-Transfer-Analysis",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2025-01-26T21:59:36Z",
+    "url": "https://github.com/YohannesDK/FPL-Transfer-Analysis",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2026-09-15T08:56:30Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "dkiriinya/fpl-transfer-engine",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-10-20T08:45:06Z",
+    "url": "https://github.com/dkiriinya/fpl-transfer-engine",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2026-08-16T19:42:44Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "atsafos/fpl-transfer-advisor",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-08-29T17:42:53Z",
+    "url": "https://github.com/atsafos/fpl-transfer-advisor",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2022-03-01T20:46:16Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "IdoLerer/fpl-transfer-planner",
+    "isArchived": false,
+    "isFork": false,
+    "language": "TypeScript",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2022-03-09T12:49:33Z",
+    "url": "https://github.com/IdoLerer/fpl-transfer-planner",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2026-01-06T15:44:30Z",
+    "description": "Fantasy Premier League squad building app.",
+    "forksCount": 0,
+    "fullName": "zackgenia/FPL-Transfer-Recommender",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-01-06T15:44:31Z",
+    "url": "https://github.com/zackgenia/FPL-Transfer-Recommender",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2021-04-21T03:37:46Z",
+    "description": "Predicting player points in Fantasy Premier League to better assess in-game transfers",
+    "forksCount": 0,
+    "fullName": "mmanka1/fpl-transfer-rater",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2022-05-29T17:50:03Z",
+    "url": "https://github.com/mmanka1/fpl-transfer-rater",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2017-10-23T12:42:14Z",
+    "description": "The angular 4 fpl transfer suggester project.",
+    "forksCount": 0,
+    "fullName": "mickygeehan/fpl-transfer-suggester",
+    "isArchived": false,
+    "isFork": false,
+    "language": "TypeScript",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2018-04-26T19:43:06Z",
+    "url": "https://github.com/mickygeehan/fpl-transfer-suggester",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2026-08-23T17:34:35Z",
+    "description": "FPL player prediction and transfer optimization model",
+    "forksCount": 0,
+    "fullName": "testadordeprograma41/fpl-transfer-model",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-10-10T20:22:03Z",
+    "url": "https://github.com/testadordeprograma41/fpl-transfer-model",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2025-03-30T14:13:09Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "Delaney/fpl-transfer-advisor",
+    "isArchived": false,
+    "isFork": false,
+    "language": "TypeScript",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2025-05-04T22:01:02Z",
+    "url": "https://github.com/Delaney/fpl-transfer-advisor",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2020-11-24T15:59:01Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "rb1307/FPl_Transfer_advisor",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2020-12-01T20:13:25Z",
+    "url": "https://github.com/rb1307/FPl_Transfer_advisor",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2022-07-16T22:24:29Z",
+    "description": "An API to suggest transfers for an existing fantasy premier league team",
+    "forksCount": 0,
+    "fullName": "matt-condon/FPL_TransferSuggester",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2022-07-16T22:24:29Z",
+    "url": "https://github.com/matt-condon/FPL_TransferSuggester",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2019-08-25T16:06:12Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "hariharan-dev/fpl_transfer_alert",
+    "isArchived": false,
+    "isFork": false,
+    "language": "JavaScript",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2021-11-18T00:55:26Z",
+    "url": "https://github.com/hariharan-dev/fpl_transfer_alert",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2026-10-11T21:38:09Z",
+    "description": "A machine learing project that takes a given FPL team and recommends the best transfer for each position for that gameweek.",
+    "forksCount": 0,
+    "fullName": "mias1234/FPL_transfer_predictor",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-10-11T23:13:17Z",
+    "url": "https://github.com/mias1234/FPL_transfer_predictor",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2026-02-04T18:26:42Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "JBPSWFC/FPL-Transfer-Optimiser",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-02-04T18:27:05Z",
+    "url": "https://github.com/JBPSWFC/FPL-Transfer-Optimiser",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2026-08-30T09:55:14Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "fishdawg90/fpl-transfer-scout",
+    "isArchived": false,
+    "isFork": false,
+    "language": "JavaScript",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-09-01T19:09:07Z",
+    "url": "https://github.com/fishdawg90/fpl-transfer-scout",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2025-07-25T10:30:25Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "tepuy-solutions/fpl-transfer-tracker",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-10-24T14:56:45Z",
+    "url": "https://github.com/tepuy-solutions/fpl-transfer-tracker",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2020-01-02T01:09:25Z",
+    "description": "Optimal transfer schedule of players between teams to maximize points in Fantasy Premier League",
+    "forksCount": 0,
+    "fullName": "Arunachalam-M/FPL-Transfer-Optimization",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 1,
+    "updatedAt": "2020-01-05T04:11:03Z",
+    "url": "https://github.com/Arunachalam-M/FPL-Transfer-Optimization",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2026-10-12T20:45:35Z",
+    "description": "Predicts Fantasy Premier League player points and  picks optimal transfers under budget and squad constraints",
+    "forksCount": 0,
+    "fullName": "emmanuelfrimpong418/fpl-transfer-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-10-13T00:29:33Z",
+    "url": "https://github.com/emmanuelfrimpong418/fpl-transfer-optimizer",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2017-07-10T17:40:55Z",
+    "description": "A simple web app to check which players are taken by your group members in Fantasy Premier League.",
+    "forksCount": 0,
+    "fullName": "lpatino10/fpl-transfer-checker",
+    "isArchived": false,
+    "isFork": false,
+    "language": "JavaScript",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2017-07-12T18:42:34Z",
+    "url": "https://github.com/lpatino10/fpl-transfer-checker",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2021-03-03T18:58:27Z",
+    "description": "This app will allow FPL managers to schedule transfers",
+    "forksCount": 0,
+    "fullName": "grishaLR/FPL-Transfer-Scheduler",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 1,
+    "updatedAt": "2021-03-07T20:58:16Z",
+    "url": "https://github.com/grishaLR/FPL-Transfer-Scheduler",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2026-02-13T21:39:25Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "ChiCoTheLaAnh/fpl-transfer-suggester",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-02-14T07:56:22Z",
+    "url": "https://github.com/ChiCoTheLaAnh/fpl-transfer-suggester",
+    "_queries": [
+      "fpl transfer"
+    ]
+  },
+  {
+    "createdAt": "2021-03-05T20:37:02Z",
+    "description": "A collection of tutorials and recipes to use optimization for winning Fantasy Premier League :)",
+    "forksCount": 64,
+    "fullName": "solioanalytics/open-fpl-solver",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "url": "https://api.github.com/licenses/apache-2.0"
+    },
+    "stargazersCount": 192,
+    "updatedAt": "2026-10-16T02:38:47Z",
+    "url": "https://github.com/solioanalytics/open-fpl-solver",
+    "_queries": [
+      "fpl solver",
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2026-08-23T02:35:21Z",
+    "description": "FPL Solver",
+    "forksCount": 0,
+    "fullName": "infinitevoid1793/fpl-solver",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-08-23T02:35:47Z",
+    "url": "https://github.com/infinitevoid1793/fpl-solver",
+    "_queries": [
+      "fpl solver"
+    ]
+  },
+  {
+    "createdAt": "2025-03-05T13:43:22Z",
+    "description": "FPL Solver",
+    "forksCount": 0,
+    "fullName": "adamb2003/fpl",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "url": "https://api.github.com/licenses/apache-2.0"
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2025-04-01T16:11:35Z",
+    "url": "https://github.com/adamb2003/fpl",
+    "_queries": [
+      "fpl solver"
+    ]
+  },
+  {
+    "createdAt": "2026-07-24T09:10:04Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "Tolvic/fplSolver",
+    "isArchived": false,
+    "isFork": false,
+    "language": "C#",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-08-05T09:00:39Z",
+    "url": "https://github.com/Tolvic/fplSolver",
+    "_queries": [
+      "fpl solver"
+    ]
+  },
+  {
+    "createdAt": "2026-07-24T13:47:19Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "david20courtney-cmyk/fpl-solver",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-07-24T13:56:38Z",
+    "url": "https://github.com/david20courtney-cmyk/fpl-solver",
+    "_queries": [
+      "fpl solver"
+    ]
+  },
+  {
+    "createdAt": "2025-07-30T17:27:34Z",
+    "description": "Python-based solution to optimize your Fantasy Premier League (FPL) squad selection using Integer Linear Programming (ILP)",
+    "forksCount": 0,
+    "fullName": "thomaszwagerman/fpl-solver",
+    "isArchived": true,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-10-22T15:59:02Z",
+    "url": "https://github.com/thomaszwagerman/fpl-solver",
+    "_queries": [
+      "fpl solver"
+    ]
+  },
+  {
+    "createdAt": "2026-09-11T05:24:46Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "alcoholdone/fpl_solver",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-10-10T01:19:34Z",
+    "url": "https://github.com/alcoholdone/fpl_solver",
+    "_queries": [
+      "fpl solver"
+    ]
+  },
+  {
+    "createdAt": "2022-08-05T15:33:30Z",
+    "description": "A simple attempt to create an ideal FPL team using linear programming and API anaylsis.",
+    "forksCount": 0,
+    "fullName": "waheeduk/FPL_Solver",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2022-08-05T15:33:30Z",
+    "url": "https://github.com/waheeduk/FPL_Solver",
+    "_queries": [
+      "fpl solver"
+    ]
+  },
+  {
+    "createdAt": "2026-02-20T17:01:28Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "skyefung02/fpl-solver",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "url": "https://api.github.com/licenses/apache-2.0"
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-09-04T08:11:44Z",
+    "url": "https://github.com/skyefung02/fpl-solver",
+    "_queries": [
+      "fpl solver"
+    ]
+  },
+  {
+    "createdAt": "2025-09-10T10:09:58Z",
+    "description": "Full FPL pipeline: cleans FBRef + FPL data, predicts player points by combining start probabilities and conditional points. Runs multi-gameweek optimisation with transfers and fixed player options, and utilises Monte Carlo simulations to give outcomes with quantiles. ",
+    "forksCount": 0,
+    "fullName": "newtonianton/FPL_Solver",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "url": "https://api.github.com/licenses/apache-2.0"
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2025-09-16T22:23:52Z",
+    "url": "https://github.com/newtonianton/FPL_Solver",
+    "_queries": [
+      "fpl solver"
+    ]
+  },
+  {
+    "createdAt": "2026-08-21T11:27:22Z",
+    "description": "A solver to help me beat my friends in fantasy premier league, hopefully",
+    "forksCount": 0,
+    "fullName": "madserdal-prog/fpl_solver",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-10-24T13:00:29Z",
+    "url": "https://github.com/madserdal-prog/fpl_solver",
+    "_queries": [
+      "fpl solver"
+    ]
+  },
+  {
+    "createdAt": "2022-03-04T19:59:17Z",
+    "description": "Solutions for friends",
+    "forksCount": 1,
+    "fullName": "FPLChase/FPL-Solver",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2023-03-03T14:51:26Z",
+    "url": "https://github.com/FPLChase/FPL-Solver",
+    "_queries": [
+      "fpl solver"
+    ]
+  },
+  {
+    "createdAt": "2026-03-11T15:15:56Z",
+    "description": "Holistic FPL season optimization using Mixed Integer Linear Programming (MILP)",
+    "forksCount": 1,
+    "fullName": "lisovoy7/fpl-solver",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-10-22T11:57:50Z",
+    "url": "https://github.com/lisovoy7/fpl-solver",
+    "_queries": [
+      "fpl solver"
+    ]
+  },
+  {
+    "createdAt": "2026-05-28T10:53:48Z",
+    "description": "An elite Fantasy Premier League (FPL) solver utilizing Integer Linear Programming (LP) and Multi-Horizon Beam Search. Features real-time FPL team syncing, automated xP scraping, probabilistic variance modeling, and risk-adjusted squad optimization.",
+    "forksCount": 0,
+    "fullName": "QuisTech/fpl-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "TypeScript",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-10-24T10:45:53Z",
+    "url": "https://github.com/QuisTech/fpl-optimizer",
+    "_queries": [
+      "fpl solver"
+    ]
+  },
+  {
+    "createdAt": "2014-09-17T03:39:43Z",
+    "description": "Creates a .csv file of all players in the English Player League with their respective team and total fantasy points",
+    "forksCount": 905,
+    "fullName": "vaastav/Fantasy-Premier-League",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "url": ""
+    },
+    "stargazersCount": 1813,
+    "updatedAt": "2026-10-23T17:36:41Z",
+    "url": "https://github.com/vaastav/Fantasy-Premier-League",
+    "_queries": [
+      "fantasy premier league",
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2015-09-17T16:40:37Z",
+    "description": "Free open public domain football data in JSON incl. English Premier League, Bundesliga, Primera Divisi\u00f3n, Serie A and more - No API key required ;-)",
+    "forksCount": 220,
+    "fullName": "openfootball/football.json",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "cc0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://api.github.com/licenses/cc0-1.0"
+    },
+    "stargazersCount": 1045,
+    "updatedAt": "2026-10-23T17:48:19Z",
+    "url": "https://github.com/openfootball/football.json",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2021-01-23T21:03:15Z",
+    "description": "Fantasy Premier League Kotlin/Compose Multiplatform sample ",
+    "forksCount": 62,
+    "fullName": "joreilly/FantasyPremierLeague",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "url": "https://api.github.com/licenses/apache-2.0"
+    },
+    "stargazersCount": 604,
+    "updatedAt": "2026-10-19T10:18:39Z",
+    "url": "https://github.com/joreilly/FantasyPremierLeague",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2018-07-25T09:03:40Z",
+    "description": "Machine learning Fantasy Premier League team",
+    "forksCount": 105,
+    "fullName": "alan-turing-institute/AIrsenal",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 354,
+    "updatedAt": "2026-10-24T09:20:45Z",
+    "url": "https://github.com/alan-turing-institute/AIrsenal",
+    "_queries": [
+      "fantasy premier league",
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2016-08-16T07:08:12Z",
+    "description": "\u26bd  Statistics for your mini leagues.",
+    "forksCount": 36,
+    "fullName": "spinach/FantasyPremierLeague.py",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 134,
+    "updatedAt": "2026-07-14T00:46:13Z",
+    "url": "https://github.com/spinach/FantasyPremierLeague.py",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2014-10-19T00:13:00Z",
+    "description": "A collection of tools to collect and download various data.",
+    "forksCount": 94,
+    "fullName": "rasbt/datacollect",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "gpl-3.0",
+      "name": "GNU General Public License v3.0",
+      "url": "https://api.github.com/licenses/gpl-3.0"
+    },
+    "stargazersCount": 212,
+    "updatedAt": "2026-10-05T14:20:56Z",
+    "url": "https://github.com/rasbt/datacollect",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2020-09-01T14:28:18Z",
+    "description": "\ud83d\udcca\u26bd  A collection of football analytics projects, data, and analysis by Edd Webster (@eddwebster), including a curated list of publicly available resources published by the football analytics community.",
+    "forksCount": 372,
+    "fullName": "eddwebster/football_analytics",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 2821,
+    "updatedAt": "2026-10-23T08:31:24Z",
+    "url": "https://github.com/eddwebster/football_analytics",
+    "_queries": [
+      "fantasy premier league",
+      "fpl expected points",
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2025-03-14T18:53:28Z",
+    "description": "Fantasy Premier League MCP Server",
+    "forksCount": 24,
+    "fullName": "rishijatia/fantasy-pl-mcp",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 80,
+    "updatedAt": "2026-09-12T06:59:26Z",
+    "url": "https://github.com/rishijatia/fantasy-pl-mcp",
+    "_queries": [
+      "fantasy premier league",
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2018-01-10T15:12:49Z",
+    "description": "An asynchronous Python wrapper for the Fantasy Premier League API.",
+    "forksCount": 107,
+    "fullName": "amosbastian/fpl",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 332,
+    "updatedAt": "2026-10-19T13:45:33Z",
+    "url": "https://github.com/amosbastian/fpl",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2023-05-07T15:51:26Z",
+    "description": "Unofficial ESPN endpoint documentation and reference code. Not affiliated with upstream providers; no hosted API or data service.",
+    "forksCount": 92,
+    "fullName": "pseudo-r/Public-ESPN-API",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 765,
+    "updatedAt": "2026-10-23T21:17:01Z",
+    "url": "https://github.com/pseudo-r/Public-ESPN-API",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2014-08-24T22:07:28Z",
+    "description": "English Premier League 2017-18 Fantasy Stats for Geeks",
+    "forksCount": 19,
+    "fullName": "jokecamp/epl-fantasy-geek",
+    "isArchived": false,
+    "isFork": false,
+    "language": "HTML",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 53,
+    "updatedAt": "2026-04-10T11:54:12Z",
+    "url": "https://github.com/jokecamp/epl-fantasy-geek",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2019-03-20T08:30:38Z",
+    "description": "This package enables those interested in Fantasy Premier League to perform detailed data analysis of the game, using the FPL's JSON API. The fplscrapR functions help R users collect and parse data from the Official Fantasy Premier League website.",
+    "forksCount": 15,
+    "fullName": "wiscostret/fplscrapR",
+    "isArchived": true,
+    "isFork": false,
+    "language": "R",
+    "license": {
+      "key": "cc0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://api.github.com/licenses/cc0-1.0"
+    },
+    "stargazersCount": 77,
+    "updatedAt": "2026-10-01T14:19:36Z",
+    "url": "https://github.com/wiscostret/fplscrapR",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2021-06-07T08:22:11Z",
+    "description": "\u26bd High-performance football analytics: build data pipelines, scrape data, model matches, rank teams, and bet smarter | Powered by www.pena.lt/y \ud83d\ude80",
+    "forksCount": 36,
+    "fullName": "martineastwood/penaltyblog",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 243,
+    "updatedAt": "2026-10-23T01:52:57Z",
+    "url": "https://github.com/martineastwood/penaltyblog",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2018-09-16T21:30:57Z",
+    "description": "Fantasy Premier League Stats, Visualizations & Analysis. :soccer: :bar_chart: :chart_with_upwards_trend: ",
+    "forksCount": 9,
+    "fullName": "antoniaelek/fantasy-premier-league",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 37,
+    "updatedAt": "2025-12-16T14:34:39Z",
+    "url": "https://github.com/antoniaelek/fantasy-premier-league",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2020-10-29T02:53:55Z",
+    "description": "Optimized Fantasy Premier League squads - everyday!",
+    "forksCount": 13,
+    "fullName": "sertalpbilal/fpl_optimized",
+    "isArchived": false,
+    "isFork": false,
+    "language": "HTML",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "url": ""
+    },
+    "stargazersCount": 69,
+    "updatedAt": "2026-10-24T13:49:51Z",
+    "url": "https://github.com/sertalpbilal/fpl_optimized",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2026-09-03T17:29:14Z",
+    "description": "",
+    "forksCount": 63,
+    "fullName": "Stanley471/FantasyXI",
+    "isArchived": false,
+    "isFork": false,
+    "language": "TypeScript",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 2,
+    "updatedAt": "2026-10-24T07:17:02Z",
+    "url": "https://github.com/Stanley471/FantasyXI",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2021-05-09T13:52:56Z",
+    "description": "Open-source Fantasy Premier League tools",
+    "forksCount": 9,
+    "fullName": "bapairaew/open-fpl",
+    "isArchived": false,
+    "isFork": false,
+    "language": "TypeScript",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 29,
+    "updatedAt": "2026-10-14T06:29:16Z",
+    "url": "https://github.com/bapairaew/open-fpl",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2019-08-28T13:25:37Z",
+    "description": "\ufe0f\u26bd\ufe0f AI for my Fantasy Premier League team.",
+    "forksCount": 7,
+    "fullName": "ravgeetdhillon/fantasyAI",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 20,
+    "updatedAt": "2025-12-16T14:34:51Z",
+    "url": "https://github.com/ravgeetdhillon/fantasyAI",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2019-06-29T10:25:35Z",
+    "description": "Fantasy Premier League on Ethereum",
+    "forksCount": 9,
+    "fullName": "nichanank/crypto-fpl",
+    "isArchived": false,
+    "isFork": false,
+    "language": "JavaScript",
+    "license": {
+      "key": "gpl-3.0",
+      "name": "GNU General Public License v3.0",
+      "url": "https://api.github.com/licenses/gpl-3.0"
+    },
+    "stargazersCount": 20,
+    "updatedAt": "2026-10-20T10:40:38Z",
+    "url": "https://github.com/nichanank/crypto-fpl",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2018-05-07T14:21:31Z",
+    "description": "Exports fantasy premier league season history to excel workbook",
+    "forksCount": 8,
+    "fullName": "fez09/FPL-data-scraper",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 20,
+    "updatedAt": "2025-07-23T16:36:21Z",
+    "url": "https://github.com/fez09/FPL-data-scraper",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2019-07-24T10:48:08Z",
+    "description": "",
+    "forksCount": 17,
+    "fullName": "solpaul/fpl-prediction",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "url": ""
+    },
+    "stargazersCount": 63,
+    "updatedAt": "2026-04-28T21:31:24Z",
+    "url": "https://github.com/solpaul/fpl-prediction",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2019-01-31T13:34:23Z",
+    "description": "A bot made for /r/FantasyPL",
+    "forksCount": 13,
+    "fullName": "amosbastian/FPLbot",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 70,
+    "updatedAt": "2026-07-02T06:41:49Z",
+    "url": "https://github.com/amosbastian/FPLbot",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2013-08-14T18:16:56Z",
+    "description": "English Premier League fantasy team optimization",
+    "forksCount": 8,
+    "fullName": "jnu/eplfantasy",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 19,
+    "updatedAt": "2025-02-15T21:45:16Z",
+    "url": "https://github.com/jnu/eplfantasy",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2026-02-16T07:43:18Z",
+    "description": "Open-source agent skills for live sports data and prediction markets. Football, F1, Kalshi, Polymarket. Zero API keys. SKILL.md format.",
+    "forksCount": 38,
+    "fullName": "machina-sports/sports-skills",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 256,
+    "updatedAt": "2026-10-23T23:24:51Z",
+    "url": "https://github.com/machina-sports/sports-skills",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2019-11-03T18:39:53Z",
+    "description": "Jupyter notebook for interactively analysing Fantasy Premier League (FPL) players and optimising your team's performance",
+    "forksCount": 6,
+    "fullName": "177arc/fpl-advisor",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 18,
+    "updatedAt": "2024-12-22T18:03:07Z",
+    "url": "https://github.com/177arc/fpl-advisor",
+    "_queries": [
+      "fantasy premier league",
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2017-06-05T18:00:07Z",
+    "description": "fetch Fantasy Premier League (FPL) data",
+    "forksCount": 8,
+    "fullName": "ewenme/fplr",
+    "isArchived": false,
+    "isFork": false,
+    "language": "R",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "url": ""
+    },
+    "stargazersCount": 27,
+    "updatedAt": "2026-01-08T06:22:45Z",
+    "url": "https://github.com/ewenme/fplr",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2021-04-12T22:49:41Z",
+    "description": "My Kotlin Multiplatform playground that is NOT a clone of Netflix",
+    "forksCount": 97,
+    "fullName": "VictorKabata/Notflix",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Kotlin",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 681,
+    "updatedAt": "2026-10-19T10:06:53Z",
+    "url": "https://github.com/VictorKabata/Notflix",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2020-12-04T15:20:33Z",
+    "description": "Kiwi shared stats/resources",
+    "forksCount": 12,
+    "fullName": "theFPLkiwi/theFPLkiwi",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 32,
+    "updatedAt": "2026-09-09T23:42:14Z",
+    "url": "https://github.com/theFPLkiwi/theFPLkiwi",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2020-07-19T09:26:52Z",
+    "description": "code and plots for viz I put on social media",
+    "forksCount": 3,
+    "fullName": "tonyelhabr/sports_viz",
+    "isArchived": false,
+    "isFork": false,
+    "language": "R",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 56,
+    "updatedAt": "2026-10-04T16:47:35Z",
+    "url": "https://github.com/tonyelhabr/sports_viz",
+    "_queries": [
+      "fantasy premier league"
+    ]
+  },
+  {
+    "createdAt": "2024-12-30T00:44:00Z",
+    "description": "The ultimate FPL dataset including the 2026/27 season. Fuses official FPL API data with detailed match stats, dynamic team Elo ratings, and full cup, friendlies and Euro coverage. All data is aligned by official FPL IDs for deep analysis.",
+    "forksCount": 53,
+    "fullName": "olbauday/FPL-Core-Insights",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 223,
+    "updatedAt": "2026-10-24T12:09:35Z",
+    "url": "https://github.com/olbauday/FPL-Core-Insights",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2021-03-15T21:52:34Z",
+    "description": "Train and deploy LUT-based neural networks on FPGAs",
+    "forksCount": 35,
+    "fullName": "Xilinx/logicnets",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "url": "https://api.github.com/licenses/apache-2.0"
+    },
+    "stargazersCount": 123,
+    "updatedAt": "2026-10-22T05:45:00Z",
+    "url": "https://github.com/Xilinx/logicnets",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2022-07-28T05:42:21Z",
+    "description": "A machine learning system that predicts fpl points of players",
+    "forksCount": 6,
+    "fullName": "saheedniyi02/fpl-ai",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 45,
+    "updatedAt": "2026-10-20T09:16:05Z",
+    "url": "https://github.com/saheedniyi02/fpl-ai",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2019-09-17T12:39:57Z",
+    "description": "A project to predict the outcomes of Premier League football matches",
+    "forksCount": 4,
+    "fullName": "calbal91/project-moneyballing-fpl",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 22,
+    "updatedAt": "2026-09-04T01:04:59Z",
+    "url": "https://github.com/calbal91/project-moneyballing-fpl",
+    "_queries": [
+      "fpl expected points",
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2014-05-19T10:04:08Z",
+    "description": "QuickFIX/J is a full featured messaging engine for the FIX protocol. - This is the official project repository.",
+    "forksCount": 677,
+    "fullName": "quickfix-j/quickfixj",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Java",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "url": ""
+    },
+    "stargazersCount": 1157,
+    "updatedAt": "2026-10-24T02:58:15Z",
+    "url": "https://github.com/quickfix-j/quickfixj",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2022-01-02T05:49:01Z",
+    "description": "Fantasy Premier League mobile application for checking on your fpl teams, live premier league scores and player stats.",
+    "forksCount": 5,
+    "fullName": "CodeByTarun/FPLApp",
+    "isArchived": false,
+    "isFork": false,
+    "language": "TypeScript",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 12,
+    "updatedAt": "2026-05-26T14:42:04Z",
+    "url": "https://github.com/CodeByTarun/FPLApp",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2026-02-18T19:47:17Z",
+    "description": "Fantasy Premier League dashboard built with Streamlit that tracks your team in real time using your manager ID, including live points, fixtures, leagues, and gameweek/rank trends.",
+    "forksCount": 0,
+    "fullName": "dhruvgupta2109/fplmanager",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 51,
+    "updatedAt": "2026-10-19T03:28:52Z",
+    "url": "https://github.com/dhruvgupta2109/fplmanager",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2019-12-11T17:54:23Z",
+    "description": "A points projection model for FPL in 19/20 (Now deprecated)",
+    "forksCount": 2,
+    "fullName": "harryrgrove/FPLmodel_19-20",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 18,
+    "updatedAt": "2026-06-20T14:54:59Z",
+    "url": "https://github.com/harryrgrove/FPLmodel_19-20",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2020-08-17T14:05:21Z",
+    "description": "Line-up optimiser for Fantasy Premier League",
+    "forksCount": 2,
+    "fullName": "ChrisMusson/FPL_Optimiser",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 13,
+    "updatedAt": "2024-08-23T03:34:07Z",
+    "url": "https://github.com/ChrisMusson/FPL_Optimiser",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2022-08-04T13:30:32Z",
+    "description": "Fantasy Premier League Team Optimizer - Win at FPL with lazines",
+    "forksCount": 2,
+    "fullName": "janbjorge/lazyFPL",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 4,
+    "updatedAt": "2025-01-23T20:06:39Z",
+    "url": "https://github.com/janbjorge/lazyFPL",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2022-03-05T14:45:26Z",
+    "description": "Open-source E-ink monitor. Mirror of https://gitlab.com/zephray/glider",
+    "forksCount": 108,
+    "fullName": "Modos-Labs/Glider",
+    "isArchived": false,
+    "isFork": false,
+    "language": "C",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "url": ""
+    },
+    "stargazersCount": 2692,
+    "updatedAt": "2026-10-23T04:47:02Z",
+    "url": "https://github.com/Modos-Labs/Glider",
+    "_queries": [
+      "fpl expected points",
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2018-02-05T17:35:39Z",
+    "description": "Use bookies' odds to optimise fantasy premier league performance",
+    "forksCount": 2,
+    "fullName": "jtattersall09403/BluffBall",
+    "isArchived": false,
+    "isFork": false,
+    "language": "R",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 5,
+    "updatedAt": "2023-08-01T07:32:42Z",
+    "url": "https://github.com/jtattersall09403/BluffBall",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2026-05-26T14:58:20Z",
+    "description": "Fantasy Premier League & Premier League historical dataset \u2014 player/team stats scraped weekly via Python, with PL match event data spanning 2009 to present, updated each gameweek.",
+    "forksCount": 2,
+    "fullName": "imadeddine-belkat/Premier-League-Stats",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 3,
+    "updatedAt": "2026-10-20T16:39:32Z",
+    "url": "https://github.com/imadeddine-belkat/Premier-League-Stats",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2026-08-08T14:56:06Z",
+    "description": "Open Source model by SmartPlayFPL.com \u2014 expected-points model for Fantasy Premier League. Data, weights, evaluation harness and negative results included.",
+    "forksCount": 0,
+    "fullName": "qazybekb/smartplayfpl-dastan",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 6,
+    "updatedAt": "2026-09-18T11:49:29Z",
+    "url": "https://github.com/qazybekb/smartplayfpl-dastan",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2020-10-29T16:51:27Z",
+    "description": "Thread-agnostic Actors in Common Lisp",
+    "forksCount": 11,
+    "fullName": "dbmcclain/Lisp-Actors",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Common Lisp",
+    "license": {
+      "key": "unlicense",
+      "name": "The Unlicense",
+      "url": "https://api.github.com/licenses/unlicense"
+    },
+    "stargazersCount": 114,
+    "updatedAt": "2026-08-29T13:25:03Z",
+    "url": "https://github.com/dbmcclain/Lisp-Actors",
+    "_queries": [
+      "fpl expected points",
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2022-10-15T21:24:25Z",
+    "description": "ICAO ATS and OLDI Message Parser that parses all defined ATS and OLDI messages defined in ICAO DOC 4444 and the OLDI 4.2 specification respectively. The ICAO Parser will parse all the message titles defined in the ICAO DOC 4444, including FPL, CHG, DEP, ARR, CNL etc. All software has been written by Peter Venton, (pventon).",
+    "forksCount": 3,
+    "fullName": "pventon/ICAO-ATS-and-OLDI-Message-Parser",
+    "isArchived": false,
+    "isFork": false,
+    "language": "HTML",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 23,
+    "updatedAt": "2026-07-20T08:48:44Z",
+    "url": "https://github.com/pventon/ICAO-ATS-and-OLDI-Message-Parser",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2024-09-19T22:46:46Z",
+    "description": "Predict Fantasy Premier League (FPL) points using two models: a Random Forest regression (ML_xP.py) and a custom statistical model (xP_FPL.py). This project explores different approaches to predicting player performance, with a detailed comparison for Gameweek 5 of the 2024/25 EPL season.",
+    "forksCount": 1,
+    "fullName": "daniel-mehta/FPL-Expected-Points",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 2,
+    "updatedAt": "2026-08-04T10:18:04Z",
+    "url": "https://github.com/daniel-mehta/FPL-Expected-Points",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2022-11-11T03:40:59Z",
+    "description": "This repository contains an AFTN Terminal Application that processes ICAO ATS message; this application is a standalone client that runs as a GUI application. The application is cross-platform compatible running on both Linux, Mac OSX and Windows platforms.",
+    "forksCount": 5,
+    "fullName": "pventon/AFTN-Terminal-Application",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 16,
+    "updatedAt": "2026-05-20T20:31:36Z",
+    "url": "https://github.com/pventon/AFTN-Terminal-Application",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2026-02-03T22:53:44Z",
+    "description": "",
+    "forksCount": 2,
+    "fullName": "ivannson/fpl-buddy",
+    "isArchived": false,
+    "isFork": false,
+    "language": "C",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 3,
+    "updatedAt": "2026-10-10T10:02:27Z",
+    "url": "https://github.com/ivannson/fpl-buddy",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2022-10-03T05:59:42Z",
+    "description": "ICAO Field 15 Parser and initial extracted route generator; ICAO field 15 is parsed and an extracted route produced with errors for both syntax and semantic errors. All software produced by Peter Venton (pventon)",
+    "forksCount": 3,
+    "fullName": "pventon/ICAO-F15-Parser",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "gpl-3.0",
+      "name": "GNU General Public License v3.0",
+      "url": "https://api.github.com/licenses/gpl-3.0"
+    },
+    "stargazersCount": 6,
+    "updatedAt": "2026-04-22T18:40:14Z",
+    "url": "https://github.com/pventon/ICAO-F15-Parser",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2026-05-31T03:32:01Z",
+    "description": "Free, open-source sports-data MCP server \u2014 841 tools across 64 providers: cross-book betting odds, official league stats, racing, fantasy, cricket, F1 and more. 44 providers need no key. Now also places bets at four Australian books. Claude Desktop / Cursor / any MCP client.",
+    "forksCount": 12,
+    "fullName": "DanielTomaro13/sportsdata-mcp",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 29,
+    "updatedAt": "2026-10-24T00:29:57Z",
+    "url": "https://github.com/DanielTomaro13/sportsdata-mcp",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2023-12-06T12:01:20Z",
+    "description": "My placement experience and guidance",
+    "forksCount": 7,
+    "fullName": "ayush-agarwal-0502/Placement-guidance-juniors",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 98,
+    "updatedAt": "2026-10-20T18:06:30Z",
+    "url": "https://github.com/ayush-agarwal-0502/Placement-guidance-juniors",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2025-02-23T16:29:34Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "owen-lacey/claud.io",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 4,
+    "updatedAt": "2026-10-16T15:10:14Z",
+    "url": "https://github.com/owen-lacey/claud.io",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2020-10-24T10:45:35Z",
+    "description": "AWS lambda function for preparing data for FPL data analysers, such as the FPL Advisor (177arc/fpl-advisor)",
+    "forksCount": 1,
+    "fullName": "177arc/fpl-data",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 4,
+    "updatedAt": "2022-05-27T16:02:57Z",
+    "url": "https://github.com/177arc/fpl-data",
+    "_queries": [
+      "fpl expected points"
+    ]
+  },
+  {
+    "createdAt": "2019-09-12T10:44:07Z",
+    "description": "Picking an FPL captain with a Bayesian multilevel points predictor model",
+    "forksCount": 0,
+    "fullName": "mbarnfield/fpl_captain",
+    "isArchived": false,
+    "isFork": false,
+    "language": "HTML",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 3,
+    "updatedAt": "2019-12-16T12:59:14Z",
+    "url": "https://github.com/mbarnfield/fpl_captain",
+    "_queries": [
+      "fpl captain"
+    ]
+  },
+  {
+    "createdAt": "2025-06-07T19:54:23Z",
+    "description": "fpl_captain_agent",
+    "forksCount": 0,
+    "fullName": "amit3992/fpl_captain_agent",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-03-14T19:33:50Z",
+    "url": "https://github.com/amit3992/fpl_captain_agent",
+    "_queries": [
+      "fpl captain"
+    ]
+  },
+  {
+    "createdAt": "2022-09-05T14:26:54Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "mawlm5007/FPL-Captain-Predictor",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2022-09-05T14:27:57Z",
+    "url": "https://github.com/mawlm5007/FPL-Captain-Predictor",
+    "_queries": [
+      "fpl captain"
+    ]
+  },
+  {
+    "createdAt": "2026-09-22T12:28:45Z",
+    "description": "A multi-factored decision engine written in C that algorithmically weights and ranks optimal FPL captaincy picks.",
+    "forksCount": 0,
+    "fullName": "samueledokpa/fpl-captaincy-engine",
+    "isArchived": false,
+    "isFork": false,
+    "language": "C",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-10-15T09:27:29Z",
+    "url": "https://github.com/samueledokpa/fpl-captaincy-engine",
+    "_queries": [
+      "fpl captain"
+    ]
+  },
+  {
+    "createdAt": "2026-07-18T18:30:53Z",
+    "description": "Public cryptographic proof records for the FPL Captain Picker Track Record.",
+    "forksCount": 0,
+    "fullName": "premtipsterfpl/fpl-captain-picker-proofs",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2026-07-18T18:31:00Z",
+    "url": "https://github.com/premtipsterfpl/fpl-captain-picker-proofs",
+    "_queries": [
+      "fpl captain"
+    ]
+  },
+  {
+    "createdAt": "2026-03-28T12:05:11Z",
+    "description": "End-to-end FPL captain picker data pipeline  with FastAPI, AWS S3, Snowflake, dbt, Streamlit, Terraform",
+    "forksCount": 0,
+    "fullName": "Stepha-Nek/fpl-stats-app",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 1,
+    "updatedAt": "2026-03-29T16:51:04Z",
+    "url": "https://github.com/Stepha-Nek/fpl-stats-app",
+    "_queries": [
+      "fpl captain"
+    ]
+  },
+  {
+    "createdAt": "2018-10-10T16:53:45Z",
+    "description": "Data, Bata, Mata and everything else related to the blog https://medium.com/datacomics/building-an-fpl-captain-classifier-cf4ee343ebcc",
+    "forksCount": 1,
+    "fullName": "raghoonandh/FPLCaptianClassifier",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2018-10-10T16:57:01Z",
+    "url": "https://github.com/raghoonandh/FPLCaptianClassifier",
+    "_queries": [
+      "fpl captain"
+    ]
+  },
+  {
+    "createdAt": "2025-08-14T07:00:04Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "amitverton/fpl-chipp-proxy",
+    "isArchived": false,
+    "isFork": false,
+    "language": "JavaScript",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2025-08-14T08:33:52Z",
+    "url": "https://github.com/amitverton/fpl-chipp-proxy",
+    "_queries": [
+      "fpl chip"
+    ]
+  },
+  {
+    "createdAt": "2025-09-13T15:13:41Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "frosttechequities/FPL-chips-optimizer",
+    "isArchived": false,
+    "isFork": false,
+    "language": "TypeScript",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 0,
+    "updatedAt": "2025-09-23T13:25:51Z",
+    "url": "https://github.com/frosttechequities/FPL-chips-optimizer",
+    "_queries": [
+      "fpl chip"
+    ]
+  },
+  {
+    "createdAt": "2014-10-07T12:44:16Z",
+    "description": "Lattice algorithms using floating-point arithmetic",
+    "forksCount": 116,
+    "fullName": "fplll/fplll",
+    "isArchived": false,
+    "isFork": false,
+    "language": "C++",
+    "license": {
+      "key": "lgpl-2.1",
+      "name": "GNU Lesser General Public License v2.1",
+      "url": "https://api.github.com/licenses/lgpl-2.1"
+    },
+    "stargazersCount": 410,
+    "updatedAt": "2026-10-05T07:09:06Z",
+    "url": "https://github.com/fplll/fplll",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2017-11-02T18:15:13Z",
+    "description": "Code to have extra fun with Fantasy Premier League!",
+    "forksCount": 8,
+    "fullName": "CrinkleCutSnV/FPL",
+    "isArchived": true,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 15,
+    "updatedAt": "2026-10-15T20:21:07Z",
+    "url": "https://github.com/CrinkleCutSnV/FPL",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2017-06-26T17:41:33Z",
+    "description": "Optimise FPL squads",
+    "forksCount": 16,
+    "fullName": "Torvaney/fpl-optimiser",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 62,
+    "updatedAt": "2026-10-09T17:22:49Z",
+    "url": "https://github.com/Torvaney/fpl-optimiser",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2020-10-05T15:31:34Z",
+    "description": "Web application for field trial analysis.",
+    "forksCount": 22,
+    "fullName": "AparicioJohan/MrBeanApp",
+    "isArchived": false,
+    "isFork": false,
+    "language": "R",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "url": ""
+    },
+    "stargazersCount": 41,
+    "updatedAt": "2026-07-01T19:23:41Z",
+    "url": "https://github.com/AparicioJohan/MrBeanApp",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2017-12-18T01:24:29Z",
+    "description": "Quantifying Differential Privacy under Temporal Correlations",
+    "forksCount": 14,
+    "fullName": "yangcao888/TPL",
+    "isArchived": false,
+    "isFork": false,
+    "language": "MATLAB",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 12,
+    "updatedAt": "2026-03-24T10:08:28Z",
+    "url": "https://github.com/yangcao888/TPL",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2017-02-16T13:34:51Z",
+    "description": "Early retirement financial calculator",
+    "forksCount": 13,
+    "fullName": "wscott/fplan",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "gpl-3.0",
+      "name": "GNU General Public License v3.0",
+      "url": "https://api.github.com/licenses/gpl-3.0"
+    },
+    "stargazersCount": 37,
+    "updatedAt": "2026-10-22T22:22:26Z",
+    "url": "https://github.com/wscott/fplan",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2021-01-25T14:50:22Z",
+    "description": "Fantasy Premier League prediction using Machine Learning ",
+    "forksCount": 3,
+    "fullName": "ritviyer/FPL-Team-Prediction",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 8,
+    "updatedAt": "2024-08-14T14:17:47Z",
+    "url": "https://github.com/ritviyer/FPL-Team-Prediction",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2022-06-13T20:43:41Z",
+    "description": "An awesome curated list of languages and tools to program FPGAs",
+    "forksCount": 2,
+    "fullName": "emanueledelsozzo/awesome-fpga-programming",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "cc0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://api.github.com/licenses/cc0-1.0"
+    },
+    "stargazersCount": 76,
+    "updatedAt": "2026-07-31T03:32:24Z",
+    "url": "https://github.com/emanueledelsozzo/awesome-fpga-programming",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2016-01-25T13:31:31Z",
+    "description": "This is originally a collection of papers on neural network accelerators. Now it's more like my selection of research on deep learning and computer architecture.",
+    "forksCount": 393,
+    "fullName": "fengbintu/Neural-Networks-on-Silicon",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 2133,
+    "updatedAt": "2026-10-22T02:11:58Z",
+    "url": "https://github.com/fengbintu/Neural-Networks-on-Silicon",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2020-04-15T00:47:38Z",
+    "description": "Papers on Graph Analytics, Mining, and Learning",
+    "forksCount": 17,
+    "fullName": "chenxuhao/ReadingList",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 126,
+    "updatedAt": "2026-10-16T18:29:33Z",
+    "url": "https://github.com/chenxuhao/ReadingList",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2021-06-13T12:27:11Z",
+    "description": "Directory of Fortran codes on GitHub, arranged by topic",
+    "forksCount": 73,
+    "fullName": "Beliavsky/Fortran-code-on-GitHub",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "unlicense",
+      "name": "The Unlicense",
+      "url": "https://api.github.com/licenses/unlicense"
+    },
+    "stargazersCount": 389,
+    "updatedAt": "2026-10-23T22:32:41Z",
+    "url": "https://github.com/Beliavsky/Fortran-code-on-GitHub",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2022-02-10T00:36:38Z",
+    "description": "",
+    "forksCount": 3,
+    "fullName": "Xilinx/hydra",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Verilog",
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "url": "https://api.github.com/licenses/apache-2.0"
+    },
+    "stargazersCount": 14,
+    "updatedAt": "2026-01-15T05:36:21Z",
+    "url": "https://github.com/Xilinx/hydra",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2020-02-13T15:51:04Z",
+    "description": "ASTERICS - An Open Toolbox for Sophisticated FPGA-Based Image Processing",
+    "forksCount": 4,
+    "fullName": "hsa-ees/asterics",
+    "isArchived": false,
+    "isFork": false,
+    "language": "VHDL",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "url": ""
+    },
+    "stargazersCount": 9,
+    "updatedAt": "2026-08-25T06:56:56Z",
+    "url": "https://github.com/hsa-ees/asterics",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2017-10-20T01:11:02Z",
+    "description": "This is a collection of works on neural networks and neural accelerators.",
+    "forksCount": 14,
+    "fullName": "wjc852456/Neural-Networks-on-Silicon",
+    "isArchived": false,
+    "isFork": false,
+    "language": "",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 42,
+    "updatedAt": "2026-09-20T09:45:09Z",
+    "url": "https://github.com/wjc852456/Neural-Networks-on-Silicon",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2020-12-02T18:33:48Z",
+    "description": "",
+    "forksCount": 2,
+    "fullName": "EPFL-LAP/fpl20-placement",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 4,
+    "updatedAt": "2023-11-15T09:46:25Z",
+    "url": "https://github.com/EPFL-LAP/fpl20-placement",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2025-04-14T08:20:09Z",
+    "description": "MCPSDK.dev(ToolSDK.ai)'s Awesome MCP Servers and Packages Registry and Database with Structured JSON configurations. Supports OAuth2.1, DCR...",
+    "forksCount": 581,
+    "fullName": "toolsdk-ai/toolsdk-mcp-registry",
+    "isArchived": false,
+    "isFork": false,
+    "language": "TypeScript",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 201,
+    "updatedAt": "2026-10-22T09:25:14Z",
+    "url": "https://github.com/toolsdk-ai/toolsdk-mcp-registry",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2026-06-15T03:58:56Z",
+    "description": "FPL Horizon V3: Quant Optimization Engine & AI Agent for Fantasy Premier League using Constrained Portfolio Theory, Linear Programming, and Groq LLMs.",
+    "forksCount": 2,
+    "fullName": "QuisTech/fpl-admin",
+    "isArchived": false,
+    "isFork": false,
+    "language": "TypeScript",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "url": ""
+    },
+    "stargazersCount": 1,
+    "updatedAt": "2026-10-24T13:06:07Z",
+    "url": "https://github.com/QuisTech/fpl-admin",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2017-10-30T22:10:43Z",
+    "description": "linear-ish optimization of Fantasy Premier League (FPL) points",
+    "forksCount": 0,
+    "fullName": "ewenme/fplinear",
+    "isArchived": false,
+    "isFork": false,
+    "language": "R",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 5,
+    "updatedAt": "2020-09-11T22:48:33Z",
+    "url": "https://github.com/ewenme/fplinear",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2022-05-02T20:07:27Z",
+    "description": "Details about ACP maps and analysis ",
+    "forksCount": 0,
+    "fullName": "Institute-for-Local-Self-Reliance/Affordable-Connectivity-Program-Analysis",
+    "isArchived": false,
+    "isFork": false,
+    "language": "JavaScript",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 8,
+    "updatedAt": "2026-05-14T23:26:41Z",
+    "url": "https://github.com/Institute-for-Local-Self-Reliance/Affordable-Connectivity-Program-Analysis",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2023-01-14T20:54:17Z",
+    "description": "A Fantasy Premier League team optimiser that uses Bayesian hierarchical modelling and linear programming.",
+    "forksCount": 1,
+    "fullName": "jotohow/lionel",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Python",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "stargazersCount": 4,
+    "updatedAt": "2026-10-11T11:24:44Z",
+    "url": "https://github.com/jotohow/lionel",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2021-10-30T16:44:23Z",
+    "description": "Playing Fantasy Premier League with Linear Programming and Genetic Algorithms",
+    "forksCount": 1,
+    "fullName": "derruba2000/FPL_LP_GA",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 3,
+    "updatedAt": "2024-04-20T12:00:23Z",
+    "url": "https://github.com/derruba2000/FPL_LP_GA",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2024-01-09T09:47:22Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "AbhinavVenkat430/Optimizing-Fantasy-Team-Selection-An-Integer-Linear-Programming-Approach",
+    "isArchived": false,
+    "isFork": false,
+    "language": "AMPL",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 2,
+    "updatedAt": "2024-03-18T12:44:29Z",
+    "url": "https://github.com/AbhinavVenkat430/Optimizing-Fantasy-Team-Selection-An-Integer-Linear-Programming-Approach",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2019-03-15T22:06:56Z",
+    "description": "",
+    "forksCount": 1,
+    "fullName": "ngiambla/libmem",
+    "isArchived": false,
+    "isFork": false,
+    "language": "C",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "url": ""
+    },
+    "stargazersCount": 10,
+    "updatedAt": "2024-03-05T19:53:53Z",
+    "url": "https://github.com/ngiambla/libmem",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2025-10-09T22:05:45Z",
+    "description": "",
+    "forksCount": 0,
+    "fullName": "RohitDatta06/FPLpredict",
+    "isArchived": false,
+    "isFork": false,
+    "language": "Jupyter Notebook",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 2,
+    "updatedAt": "2026-01-28T20:27:40Z",
+    "url": "https://github.com/RohitDatta06/FPLpredict",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  },
+  {
+    "createdAt": "2026-02-02T18:54:57Z",
+    "description": "An end-to-end FPL AI Assistant that uses XGBoost for point prediction and Linear Programming for squad optimization.",
+    "forksCount": 0,
+    "fullName": "AnmolDeshmukh/FPL-AI-Assistant",
+    "isArchived": false,
+    "isFork": false,
+    "language": "TypeScript",
+    "license": {
+      "key": "",
+      "name": "",
+      "url": ""
+    },
+    "stargazersCount": 2,
+    "updatedAt": "2026-03-31T03:28:21Z",
+    "url": "https://github.com/AnmolDeshmukh/FPL-AI-Assistant",
+    "_queries": [
+      "fpl linear programming"
+    ]
+  }
+]
