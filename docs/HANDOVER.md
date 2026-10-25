@@ -36,6 +36,6 @@ The address is https://hamishfrob.github.io/fpl-optimiser/ . On a phone, open it
 
 ## How it updates
 
-A free job on GitHub runs twice a day. It collects the latest FPL data and bookmaker odds, saves your team, works out the advice and publishes it. You don't need to do anything. If the red warning appears, ask Hamish to check the job.
+A free job runs twice a day (on GitHub, or on GitLab if the project has moved: see `docs/GITLAB.md`). It collects the latest FPL data and bookmaker odds, saves your team, works out the advice and publishes it. You don't need to do anything. If the red warning appears, ask Hamish to check the job.
 
 To follow a different FPL team, change the number in `config.json` (it's the number after `entry/` in the team's FPL address).

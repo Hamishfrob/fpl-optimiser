@@ -1,0 +1,29 @@
+# GitLab version of the daily update and the published page. NOT TESTED on GitLab yet: see docs/GITLAB.md.
+# The GitHub version lives in .github/workflows/daily.yml and is ignored by GitLab.
+
+image: node:22
+
+pages:
+  stage: deploy
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+  script:
+    - node job/run.js
+    # Optional: save the new data back to the repository (keeps the permanent squad record).
+    # Needs a project access token with write_repository, stored as the CI variable PUSH_TOKEN.
+    - |
+      if [ -n "$PUSH_TOKEN" ] && [ "$CI_PIPELINE_SOURCE" = "schedule" ]; then
+        git config user.name "fpl-optimiser bot"
+        git config user.email "bot@users.noreply.gitlab.com"
+        git add data
+        git diff --cached --quiet || {
+          git commit -m "data: daily update $(date -u +%F) [skip ci]"
+          git push "https://oauth2:${PUSH_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git" "HEAD:${CI_DEFAULT_BRANCH}"
+        }
+      fi
+    - mkdir public
+    - cp -r index.html web data public/
+  artifacts:
+    paths:
+      - public
